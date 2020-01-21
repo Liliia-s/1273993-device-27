@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Liliia](https://up.htmlacademy.ru/htmlcss/27/user/1273993).
-* Наставник: `Неизвестно`.
+* Наставник: [Роман Кушнир](https://htmlacademy.ru/profile/id485545).
 
 ---
 
