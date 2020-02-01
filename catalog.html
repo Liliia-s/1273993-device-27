@@ -44,10 +44,50 @@
       <li class="breadcrumbs-current"><a>Моноподы для селфи</a></li>
     </ul>
     <section class="filters">
-      <h2 class="visually-hidden">Фильтр товаров</h2>
-      <p>Фильтр:</p>
-      <!-- Здесь будет форма -->
-      <button type="submit" class="button">Показать</button>
+      <h2 class="filters-name">Фильтр:</h2>
+      <form class="filters-choice" action="https://echo.htmlacademy.ru" method="get">
+        <label for="range-field">Стоимость</label>
+        от 0 <input class="range-form" type="range" id="range-field" min="0" max="5000" step="1"> до 5000
+        <fieldset class="filters-color">
+          <legend>Цвет</legend>
+          <ul>
+            <li class="filters-option">
+              <input class="checkbox-form visually-hidden" type="checkbox" name="black" id="black-field" checked>
+              <label for="black-field">Черный</label>
+            </li>
+            <li class="filters-option">
+              <input class="checkbox-form visually-hidden" type="checkbox" name="white" id="white-field">
+              <label for="white-field">Белый</label>
+            </li>
+            <li class="filters-option">
+              <input class="checkbox-form visually-hidden" type="checkbox" name="blue" id="blue-field" checked>
+              <label for="blue-field">Синий</label>
+            </li>
+            <li class="filters-option">
+              <input class="checkbox-form visually-hidden" type="checkbox" name="red" id="red-field" checked>
+              <label for="red-field">Красный</label>
+            </li>
+            <li class="filters-option">
+              <input class="checkbox-form visually-hidden" type="checkbox" name="pink" id="pink-field">
+              <label for="pink-field">Розовый</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="filters-bluetooth">
+          <legend>Bluetooth</legend>
+          <ul>
+            <li class="filters-option">
+              <input class="radio-form" type="radio" name="bluetooth" id="bluetooth-yes" value="yes" checked>
+              <label for="bluetooth-yes">Есть</label>
+            </li>
+            <li class="filters-option">
+              <input class="radio-form" type="radio" name="bluetooth" id="bluetooth-no" value="no">
+              <label for="bluetooth-no">Нет</label>
+            </li>
+          </ul>
+        </fieldset>
+        <button class="button button-filters" type="submit">Показать</button>
+      </form>
     </section>
     <section class="sort">
       <h2 class="visually-hidden">Сортировка товаров</h2>

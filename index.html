@@ -200,6 +200,28 @@
     <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-html.svg" width="27" height="34"
         alt="Логотип HTML Academy"></a>
   </footer>
+  <section class="modal-feedback">
+    <h2 class="visually-hidden">Напишите нам</h2>
+    <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+      <p>
+        <label for="name-field">Ваше имя:</label>
+        <input class="name-form" type="text" name="your-name" id="name-field" placeholder="Имя Фамилия">
+      </p>
+      <p>
+        <label for="email-field">Ваш e-mail:</label>
+        <input class="email-form" type="email" name="your-email" id="email-field" placeholder="email@example.com">
+      </p>
+      <p>
+        <label for="comment-field">Текст письма:</label>
+        <textarea class="comment-form" name="your-comment" id="comment-field"
+          placeholder="В свободной форме"></textarea>
+      </p>
+      <button class="button button-send" type="submit">Отправить</button>
+    </form>
+    <button class="button-close" type="button">
+      <span class="visually-hidden">Закрыть форму</span>
+    </button>
+  </section>
 </body>
 
 </html>
