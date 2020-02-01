@@ -156,8 +156,7 @@
       <p>Огромный выбор гаджетов не оставит равнодушным гика,
         который есть в каждом из нас.</p>
       <p>Мы можем доставить ваш товар в самые отд аленные точки
-        Росии! Device работает со многими транспортными компаниями:
-      </p>
+        Росии! Device работает со многими транспортными компаниями:</p>
       <ul>
         <li>Деловые Линии</li>
         <li>Автотрейдинг</li>
@@ -165,15 +164,19 @@
       </ul>
       <a href="about.html" class="button">Подробнее о нас</a>
     </section>
-    <section class="info-contacts">
+    <section class="contacts-info">
       <h2>Контакты</h2>
       <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете
         проверить работоспособность покупки. Всякое бывает.
       </p>
-      <a href="#"><img src="img/map.png" width="560" height="222"
-          alt="Схема проезда к интернет-магазину Device по адресу Улица Строителей, 15"></a>
-      <a href="#" class="button">Напишите нам</a>
-      <!--Здесь будет форма-->
+      <div class="modal modal-map">
+        <p><a class="contacts-map" href="#"><img src="img/map.png" width="560" height="222"
+              alt="Схема проезда к интернет-магазину Device по адресу Улица Строителей, 15"></a></p>
+        <button class="button-close" type="button">
+          <span class="visually-hidden">Закрыть карту</span>
+        </button>
+      </div>
+      <p><a href="#" class="button">Напишите нам</a></p>
     </section>
   </main>
   <footer>
@@ -200,7 +203,7 @@
     <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-html.svg" width="27" height="34"
         alt="Логотип HTML Academy"></a>
   </footer>
-  <section class="modal-feedback">
+  <section class="modal modal-feedback">
     <h2 class="visually-hidden">Напишите нам</h2>
     <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
       <p>
