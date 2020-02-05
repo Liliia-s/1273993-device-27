@@ -4,6 +4,8 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
+      <link href="css/normalize.css" rel="stylesheet">
+      <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -48,7 +50,7 @@
       <form class="filters-choice" action="https://echo.htmlacademy.ru" method="get">
         <label for="range-field">Стоимость</label>
         от 0 <input class="range-form" type="range" id="range-field" min="0" max="5000" step="1"> до 5000
-        <fieldset class="filters-color">
+        <fieldset class="filters-fieldset">
           <legend>Цвет</legend>
           <ul>
             <li class="filters-option">
@@ -73,7 +75,7 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="filters-bluetooth">
+        <fieldset class="filters-fieldset">
           <legend>Bluetooth</legend>
           <ul>
             <li class="filters-option">

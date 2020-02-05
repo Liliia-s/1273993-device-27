@@ -1,0 +1,149 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "OpenSans", sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 300;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/*-------------------------HEADER USER-NAV-------------------------*/
+
+.user-nav-header,
+.main-nav,
+.nav-catalog-list {
+  list-style: none;
+}
+.user-nav-header a {
+  color: #000000;
+}
+
+.user-nav-header a:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.user-nav-header a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+/*-------------------------HEADER MAIN-NAV-------------------------*/
+header {
+  background-color: #f7e296;
+}
+
+.main-nav a {
+  font-family: "Gilroy", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 900;
+  color: #000000;
+}
+
+.main-nav a:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.main-nav a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+/*-------------------------HEADER MAIN-NAV-CATALOG-LIST-------------------------*/
+
+.nav-catalog-list a {
+  font-family: "OpenSans", sans-serif;
+  font-size: 15px;
+  line-height: 36px;
+  font-weight: 300;
+  color: #000000;
+}
+
+.nav-catalog-list a:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.nav-catalog-list a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+/*-------------------------MAIN SLIDERS-------------------------*/
+
+.sliders-list {
+  list-style: none;
+}
+.sliders h2 {
+  font-family: "Gilroy", sans-serif;
+  font-size: 47px;
+  line-height: 56px;
+  font-weight: 900;
+}
+
+.sliders p {
+  width: 490px;
+}
+
+.button {
+  font-family: "Gilroy", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 900;
+  background-color: #f0c52e;
+}
+
+.button:hover {
+  background-color: #f0c52e;
+}
+
+.button:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.product-properties td {
+  font-family: "Gilroy", sans-serif;
+  font-size: 36px;
+  line-height: 48px;
+  font-weight: 300;
+}
+
+.product-properties th {
+  font-family: "OpenSans", sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 300;
+}
+
+/*-------------------------CATEGORY TOP-------------------------*/
+
+.category-top-list {
+  list-style: none;
+}
+
+.category-top-list a {
+  font-family: "Gilroy", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 900;
+  color: #000000;
+}
+
+.category-top-list a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
