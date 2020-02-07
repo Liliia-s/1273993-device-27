@@ -26,6 +26,16 @@ html {
   box-sizing: inherit;
 }
 
+/*-------------------------LOGO-HEADER-------------------------*/
+
+.logo-header:hover {
+  opacity: 0.6;
+}
+
+.logo-header:active {
+  opacity: 0.3;
+}
+
 /*-------------------------HEADER USER-NAV-------------------------*/
 
 .user-nav-header,
@@ -33,6 +43,7 @@ html {
 .nav-catalog-list {
   list-style: none;
 }
+
 .user-nav-header a {
   color: #000000;
 }
@@ -46,6 +57,7 @@ html {
 }
 
 /*-------------------------HEADER MAIN-NAV-------------------------*/
+
 header {
   background-color: #f7e296;
 }
@@ -87,8 +99,10 @@ header {
 /*-------------------------MAIN SLIDERS-------------------------*/
 
 .sliders-list {
+  display: flex;
   list-style: none;
 }
+
 .sliders h2 {
   font-family: "Gilroy", sans-serif;
   font-size: 47px;
@@ -105,6 +119,7 @@ header {
   font-size: 18px;
   line-height: 24px;
   font-weight: 900;
+  color: #000000;
   background-color: #f0c52e;
 }
 
@@ -133,6 +148,8 @@ header {
 /*-------------------------CATEGORY TOP-------------------------*/
 
 .category-top-list {
+  display: flex;
+  justify-content: space-between;
   list-style: none;
 }
 
@@ -144,6 +161,121 @@ header {
   color: #000000;
 }
 
+/* Разобраться с фото
+.category-top-list a:hover {
+  color: rgba(0, 0, 0, 0.3);
+} */
+
 .category-top-list a:active {
   color: rgba(0, 0, 0, 0.3);
 }
+
+/*-------------------------SERVICES-------------------------*/
+
+.services-button-list,
+.services-list {
+  list-style: none;
+}
+
+.button-serv:active {
+  color: #f7e184;
+  background-color: #000000;
+}
+
+/*-------------------------PARTNERS-------------------------*/
+
+.partners-list {
+  display: flex;
+  list-style: none;
+}
+
+.logo-dji:hover {
+  background: url('../img/logo-1.png') no-repeat;
+}
+
+.logo-gadjets:hover {
+  background: url('../img/logo-2.png') no-repeat;
+}
+
+.logo-gopro:hover {
+  background: url('../img/logo-3.png') no-repeat;
+}
+
+.logo-vive:hover {
+  background: url('../img/logo-4.png') no-repeat;
+}
+
+/*-------------------------FOOTER-NAV-------------------------*/
+
+.footer-nav {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+/*-------------------------SOCIAL-------------------------*/
+
+.social {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+/*-------------------------USER-NAV-FOOTER-------------------------*/
+
+.user-nav-footer {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+/*-------------------------MODAL-FEEDBACK-------------------------*/
+
+.input-field {
+  background-color:rgba(229, 229, 229, 0.5);
+  border: none;
+  color: rgba(70, 70, 70, 0.4);
+}
+
+.input-field:hover {
+  background-color:rgba(229, 229, 229, 0.8);
+  color: rgba(70, 70, 70, 0.4);
+}
+
+.input-field:focus {
+  border: 3px solid #f0c52e;
+  color: #000000;
+  background-color: #ffffff;
+  color: rgba(70, 70, 70  );
+}
+
+.input-field:invalid {
+  background-color: #edb5b5;
+  border: none;
+}
+
+/*-------------------------MODAL-FEEDBACK-------------------------*/
+
+.modal-feedback {
+  position: relative;
+}
+
+.button-close::after {
+position: absolute;
+content: "";
+top: 0;
+right: 0;
+width: 55px;
+height: 55px;
+background: url('../img/modal-close.svg') no-repeat;
+opacity: 0.5;
+}
+
+.button-close:hover::after {
+opacity: 1;
+}
+
+.button-close:active::after {
+  opacity: 0.3;
+}
+
