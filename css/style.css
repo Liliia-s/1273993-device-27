@@ -1,7 +1,39 @@
+@font-face {
+  font-family: "Gilroy", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/gilroylight.woff2') format('woff2'),
+       url('../fonts/gilroylight.woff') format('woff');
+ }
+
+ @font-face {
+  font-family: "Gilroy", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  src: url('../fonts/gilroyextrabold.woff2') format('woff2'),
+       url('../fonts/gilroyextrabold.woff') format('woff');
+ }
+
+ @font-face {
+  font-family: "OpenSans", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/opensanslight.woff2') format('woff2'),
+       url('../fonts/opensanslight.woff') format('woff');
+ }
+
+ @font-face {
+  font-family: "OpenSans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/opensans.woff2') format('woff2'),
+       url('../fonts/opensans.woff') format('woff');
+ }
+
 body {
   margin: 0;
   padding: 0;
-  font-family: "OpenSans", sans-serif;
+  font-family: "OpenSans", "Arial", sans-serif;
   font-size: 15px;
   line-height: 30px;
   font-weight: 300;
@@ -37,14 +69,13 @@ html {
   clip: rect(0 0 0 0);
 }
 
+/*-------------------------header-logo-------------------------*/
 
-/*-------------------------LOGO-HEADER-------------------------*/
-
-.logo-header:hover {
+.header-logo:hover {
   opacity: 0.6;
 }
 
-.logo-header:active {
+.header-logo:active {
   opacity: 0.3;
 }
 
@@ -75,7 +106,7 @@ header {
 }
 
 .main-nav a {
-  font-family: "Gilroy", sans-serif;
+  font-family: "Gilroy", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: 900;
@@ -93,7 +124,7 @@ header {
 /*-------------------------HEADER MAIN-NAV-CATALOG-LIST-------------------------*/
 
 .nav-catalog-list a {
-  font-family: "OpenSans", sans-serif;
+  font-family: "OpenSans", "Arial", sans-serif;
   font-size: 15px;
   line-height: 36px;
   font-weight: 300;
@@ -116,18 +147,18 @@ header {
 }
 
 .sliders h2 {
-  font-family: "Gilroy", sans-serif;
+  font-family: "Gilroy", "Arial", sans-serif;
   font-size: 47px;
   line-height: 56px;
   font-weight: 900;
 }
 
 .sliders p {
-  width: 490px;
+  max-width: 490px;
 }
 
 .button {
-  font-family: "Gilroy", sans-serif;
+  font-family: "Gilroy", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: 900;
@@ -144,14 +175,14 @@ header {
 }
 
 .product-properties td {
-  font-family: "Gilroy", sans-serif;
+  font-family: "Gilroy", "Arial", sans-serif;
   font-size: 36px;
   line-height: 48px;
   font-weight: 300;
 }
 
 .product-properties th {
-  font-family: "OpenSans", sans-serif;
+  font-family: "OpenSans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 20px;
   font-weight: 300;
@@ -166,7 +197,7 @@ header {
 }
 
 .category-top-list a {
-  font-family: "Gilroy", sans-serif;
+  font-family: "Gilroy", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: 900;
@@ -232,13 +263,17 @@ footer {
   list-style: none;
 }
 
-/*-------------------------LOGO-FOOTER-------------------------*/
+/*-------------------------FOOTER-LOGO-------------------------*/
 
-.logo-footer:hover {
+.footer-logo {
+  fill: #ffc600;
+}
+
+.footer-logo:hover {
   opacity: 0.6;
 }
 
-.logo-footer:active {
+.footer-logo:active {
   opacity: 0.3;
 }
 
@@ -258,6 +293,9 @@ footer {
 
 .social a {
   opacity: 0.3;
+  width: 32px;
+  height: 32px;
+  padding: 15px;
 }
 
 .social a:hover {
@@ -270,29 +308,20 @@ footer {
 
 .social-facebook {
   background: url('../img/fb.svg') no-repeat;
-  width: 32px;
-  height: 32px;
-  padding: 15px;
 }
 
 .social-instagram {
   background: url('../img/instagram.svg') no-repeat;
-  width: 32px;
-  height: 32px;
-  padding: 15px;
 }
 
 .social-twitter {
   background: url('../img/twitter.svg') no-repeat;
-  width: 32px;
-  height: 32px;
-  padding: 15px;
 }
 
 /*-------------------------FOOTER-NAV--------------------------*/
 
 .footer-nav a {
-  font-family: "Gilroy", sans-serif;
+  font-family: "Gilroy", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: 900;
@@ -311,6 +340,12 @@ footer {
 
 /*-------------------------USER-NAV-FOOTER--------------------------*/
 
+.user-nav-footer {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
 .user-item-footer a{
   color: #ffffff;
   opacity: 0.7;
@@ -321,6 +356,11 @@ footer {
 }
 
 .user-item-footer a:active {
+  opacity: 0.3;
+}
+
+/* у венеры спросить */
+.user-nav-footer .exit {
   opacity: 0.3;
 }
 
@@ -340,14 +380,6 @@ footer {
   opacity: 0.3;
 }
 
-/*-------------------------USER-NAV-FOOTER-------------------------*/
-
-.user-nav-footer {
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
-}
-
 /*-------------------------INPUT FIELD-------------------------*/
 
 .input-field {
@@ -363,9 +395,8 @@ footer {
 
 .input-field:focus {
   border: 3px solid #f0c52e;
-  color: #000000;
+  color: #464646;
   background-color: #ffffff;
-  color: rgba(70, 70, 70  );
 }
 
 .input-field:invalid {
@@ -398,5 +429,197 @@ opacity: 1;
   opacity: 0.3;
 }
 
-/*-------------------------MODAL-FEEDBACK-------------------------*/
+/* PAGE CATALOG */
 
+/*-------------------------BREADCRUMBS-------------------------*/
+
+.breadcrumbs {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  color: #000000;
+}
+
+.breadcrumbs a{
+  color: #000000;
+  opacity: 0.3;
+}
+
+.breadcrumbs-item:hover {
+  opacity: 0.6;
+}
+
+.breadcrumbs-item:active {
+  opacity: 0.1;
+}
+
+/*-------------------------SORT-------------------------*/
+
+.sort {
+  background-color: #eeeeee;
+}
+
+.sort p {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.sort-list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.sort-list a{
+  color: #000000;
+  opacity: 0.3;
+}
+
+.sort-list a:hover {
+  opacity: 0.6;
+}
+
+.sort-list a:active {
+  opacity: 1;
+}
+
+.sort-item {
+  opacity: 0.2;
+}
+
+.sort-item:hover {
+  opacity: 0.4;
+}
+
+.sort-item:active {
+  opacity: 1;
+}
+
+.increase {
+  background: url('../img/icon-up-dir.svg') no-repeat;
+  width: 11px;
+  height: 10px;
+  padding: 15px;
+}
+
+.decrease {
+  background: url('../img/icon-down-dir.svg') no-repeat;
+  width: 11px;
+  height: 10px;
+  padding: 15px;
+}
+
+/*-------------------------FILTERS-------------------------*/
+
+.filters {
+  background-color: #eeeeee;
+}
+
+.filters-name {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.filters ul {
+  list-style: none;
+}
+
+.filters legend {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 900;
+}
+
+.filters-color label::before {
+  background: url('../img/checkbox-off.svg') no-repeat;
+  content: "";
+  width: 23px;
+  height: 23px;
+  padding: 20px;
+}
+
+.filters-bluetooth label::before {
+  background: url('../img/radio-off.svg') no-repeat;
+  content: "";
+  width: 25px;
+  height: 25px;
+  padding: 20px;
+}
+
+label:hover::before {
+  opacity: 0.6;
+}
+
+.filters-color label:checked::before {
+  background: url('../img/checkbox-on.svg') no-repeat;
+  content: "";
+  width: 27px;
+  height: 23px;
+  padding: 20px;
+
+}
+
+/*-------------------------PRODUCTS-------------------------*/
+
+.products a {
+  color: #000000;
+}
+.products-list {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.add-compare {
+  opacity: 0.5;
+}
+
+.add-compare:hover {
+  opacity: 1;
+}
+
+.add-compare:active {
+  opacity: 0.2;
+}
+
+/*-------------------------PAGINATION-LIST-------------------------*/
+
+.pagination-list {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 900;
+  background-color: rgba(0, 0, 0, 0.08);
+  width: 760px;
+}
+
+.pagination-item {
+  opacity: 0.3;
+}
+
+.pagination-list .current {
+  opacity: 1;
+}
+
+.pagination-switch {
+  text-transform: uppercase;
+  padding: 20px;
+}
+
+.pagination-switch:hover {
+  background-color: #d9d9d9;
+}
+
+.pagination-switch:active {
+  opacity: 0.3;
+}
