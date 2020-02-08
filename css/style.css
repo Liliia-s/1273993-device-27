@@ -26,6 +26,18 @@ html {
   box-sizing: inherit;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+
 /*-------------------------LOGO-HEADER-------------------------*/
 
 .logo-header:hover {
@@ -205,12 +217,35 @@ header {
   background: url('../img/logo-4.png') no-repeat;
 }
 
+/*-------------------------FOOTER-------------------------*/
+
+footer {
+  background-color: #464646;
+}
+
+
 /*-------------------------FOOTER-NAV-------------------------*/
 
 .footer-nav {
   display: flex;
   justify-content: space-between;
   list-style: none;
+}
+
+/*-------------------------LOGO-FOOTER-------------------------*/
+
+.logo-footer:hover {
+  opacity: 0.6;
+}
+
+.logo-footer:active {
+  opacity: 0.3;
+}
+
+/*-------------------------ADRESS-------------------------*/
+
+.adress {
+  color: #ffffff;
 }
 
 /*-------------------------SOCIAL-------------------------*/
@@ -221,6 +256,90 @@ header {
   list-style: none;
 }
 
+.social a {
+  opacity: 0.3;
+}
+
+.social a:hover {
+  opacity: 1;
+}
+
+.social a:active {
+  opacity: 0.1;
+}
+
+.social-facebook {
+  background: url('../img/fb.svg') no-repeat;
+  width: 32px;
+  height: 32px;
+  padding: 15px;
+}
+
+.social-instagram {
+  background: url('../img/instagram.svg') no-repeat;
+  width: 32px;
+  height: 32px;
+  padding: 15px;
+}
+
+.social-twitter {
+  background: url('../img/twitter.svg') no-repeat;
+  width: 32px;
+  height: 32px;
+  padding: 15px;
+}
+
+/*-------------------------FOOTER-NAV--------------------------*/
+
+.footer-nav a {
+  font-family: "Gilroy", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 900;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.footer-nav a:hover {
+  opacity: 0.6;
+}
+
+.footer-nav a:active {
+  opacity: 0.3;
+}
+
+
+/*-------------------------USER-NAV-FOOTER--------------------------*/
+
+.user-item-footer a{
+  color: #ffffff;
+  opacity: 0.7;
+}
+
+.user-item-footer a:hover {
+  opacity: 1;
+}
+
+.user-item-footer a:active {
+  opacity: 0.3;
+}
+
+/*-------------------------NUMBER-PHONE--------------------------*/
+
+.number-phone {
+  color: #ffffff;
+}
+
+/*-------------------------LOGO-ACADEMY-------------------------*/
+
+.logo-academy:hover {
+  opacity: 0.6;
+}
+
+.logo-academy:active {
+  opacity: 0.3;
+}
+
 /*-------------------------USER-NAV-FOOTER-------------------------*/
 
 .user-nav-footer {
@@ -229,7 +348,7 @@ header {
   list-style: none;
 }
 
-/*-------------------------MODAL-FEEDBACK-------------------------*/
+/*-------------------------INPUT FIELD-------------------------*/
 
 .input-field {
   background-color:rgba(229, 229, 229, 0.5);
@@ -278,4 +397,6 @@ opacity: 1;
 .button-close:active::after {
   opacity: 0.3;
 }
+
+/*-------------------------MODAL-FEEDBACK-------------------------*/
 
