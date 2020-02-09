@@ -98,36 +98,36 @@ html {
 }
 
 .user-nav-header a:hover {
-  color: rgba(0, 0, 0, 0.6);
+  opacity: 0.6;
 }
 
 .user-nav-header a:active {
-  color: rgba(0, 0, 0, 0.3);
+  opacity: 0.3;
 }
 
 /*-------------------------HEADER MAIN-NAV-------------------------*/
 
-header {
+.main-header {
   background-color: #f7e296;
 }
 
-.main-nav a {
+.main-nav > li > a {
   font-family: "Gilroy", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: 900;
-  color: #000000;
+  color:#000000;
 }
 
-.main-nav a:hover {
-  color: rgba(0, 0, 0, 0.6);
+.main-nav a:not(.nav-catalog-current):hover {
+  opacity: 0.6;
 }
 
-.main-nav a:active {
-  color: rgba(0, 0, 0, 0.3);
+.main-nav a:not(.nav-catalog-current):active {
+  opacity: 0.3;
 }
 
-/*-------------------------HEADER MAIN-NAV-CATALOG-LIST-------------------------*/
+/*-------------------------HEADER NAV-CATALOG-LIST-------------------------*/
 
 .nav-catalog-list a {
   font-family: "OpenSans", "Arial", sans-serif;
@@ -137,12 +137,8 @@ header {
   color: #000000;
 }
 
-.nav-catalog-list a:hover {
-  color: rgba(0, 0, 0, 0.6);
-}
-
-.nav-catalog-list a:active {
-  color: rgba(0, 0, 0, 0.3);
+.nav-catalog-current {
+  opacity: 0.3;
 }
 
 /*-------------------------MAIN SLIDERS-------------------------*/
