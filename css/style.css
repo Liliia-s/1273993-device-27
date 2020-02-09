@@ -1,33 +1,33 @@
 @font-face {
-  font-family: "Gilroy", sans-serif;
+  font-family: "Gilroy";
   font-style: normal;
   font-weight: 300;
-  src: url('../fonts/gilroylight.woff2') format('woff2'),
-       url('../fonts/gilroylight.woff') format('woff');
+  src: url("../fonts/gilroylight.woff2") format("woff2"),
+       url("../fonts/gilroylight.woff") format("woff");
  }
 
  @font-face {
-  font-family: "Gilroy", sans-serif;
+  font-family: "Gilroy";
   font-style: normal;
   font-weight: 900;
-  src: url('../fonts/gilroyextrabold.woff2') format('woff2'),
-       url('../fonts/gilroyextrabold.woff') format('woff');
+  src: url("../fonts/gilroyextrabold.woff2") format("woff2"),
+       url("../fonts/gilroyextrabold.woff") format("woff");
  }
 
  @font-face {
-  font-family: "OpenSans", sans-serif;
+  font-family: "OpenSans";
   font-style: normal;
   font-weight: 300;
-  src: url('../fonts/opensanslight.woff2') format('woff2'),
-       url('../fonts/opensanslight.woff') format('woff');
+  src: url("../fonts/opensanslight.woff2") format("woff2"),
+       url("../fonts/opensanslight.woff") format("woff");
  }
 
  @font-face {
-  font-family: "OpenSans", sans-serif;
+  font-family: "OpenSans";
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/opensans.woff2') format('woff2'),
-       url('../fonts/opensans.woff') format('woff');
+  src: url("../fonts/opensans.woff2") format("woff2"),
+       url("../fonts/opensans.woff") format("woff");
  }
 
 body {
@@ -69,15 +69,21 @@ html {
   clip: rect(0 0 0 0);
 }
 
-/*-------------------------header-logo-------------------------*/
+/*-------------------------HEADER-LOGO-------------------------*/
 
-.header-logo:hover {
+.header-logo[href]:hover,
+.header-logo[href]:focus {
   opacity: 0.6;
 }
 
-.header-logo:active {
+.header-logo[href]:active {
   opacity: 0.3;
 }
+
+.header-logo img {
+  pointer-events: none;
+}
+
 
 /*-------------------------HEADER USER-NAV-------------------------*/
 
@@ -164,6 +170,7 @@ header {
   font-weight: 900;
   color: #000000;
   background-color: #f0c52e;
+  border: none;
 }
 
 .button:hover {
@@ -233,19 +240,19 @@ header {
 }
 
 .logo-dji:hover {
-  background: url('../img/logo-1.png') no-repeat;
+  background: url("../img/logo-1.png") no-repeat;
 }
 
 .logo-gadjets:hover {
-  background: url('../img/logo-2.png') no-repeat;
+  background: url("../img/logo-2.png") no-repeat;
 }
 
 .logo-gopro:hover {
-  background: url('../img/logo-3.png') no-repeat;
+  background: url("../img/logo-3.png") no-repeat;
 }
 
 .logo-vive:hover {
-  background: url('../img/logo-4.png') no-repeat;
+  background: url("../img/logo-4.png") no-repeat;
 }
 
 /*-------------------------FOOTER-------------------------*/
@@ -264,10 +271,6 @@ footer {
 }
 
 /*-------------------------FOOTER-LOGO-------------------------*/
-
-.footer-logo {
-  fill: #ffc600;
-}
 
 .footer-logo:hover {
   opacity: 0.6;
@@ -307,15 +310,15 @@ footer {
 }
 
 .social-facebook {
-  background: url('../img/fb.svg') no-repeat;
+  background: url("../img/fb.svg") no-repeat;
 }
 
 .social-instagram {
-  background: url('../img/instagram.svg') no-repeat;
+  background: url("../img/instagram.svg") no-repeat;
 }
 
 .social-twitter {
-  background: url('../img/twitter.svg') no-repeat;
+  background: url("../img/twitter.svg") no-repeat;
 }
 
 /*-------------------------FOOTER-NAV--------------------------*/
@@ -406,30 +409,54 @@ footer {
 
 /*-------------------------MODAL-FEEDBACK-------------------------*/
 
-.modal-feedback {
+.button-close {
+  border: none;
+  opacity: 0.5;
+}
+
+.modal-close {
+  width: 55px;
+  height: 55px;
+  background: url("../img/modal-close.svg") no-repeat;
+}
+
+/* Проверить этот кусок кода на интерактивной карте
+
+
+.map-close {
+  width: 55px;
+  height: 55px;
+  background: url("../img/modal-close.svg") no-repeat;
+} */
+
+
+.map-close {
   position: relative;
+  width: 55px;
+  height: 55px;
+  background-color: #ffffff;
+  border: none;
 }
 
-.button-close::after {
-position: absolute;
-content: "";
-top: 0;
-right: 0;
-width: 55px;
-height: 55px;
-background: url('../img/modal-close.svg') no-repeat;
-opacity: 0.5;
+.map-close::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 55px;
+  height: 55px;
+  background: url("../img/modal-close.svg") no-repeat;
 }
 
-.button-close:hover::after {
-opacity: 1;
+.button-close:hover {
+  opacity: 1;
 }
 
-.button-close:active::after {
+.button-close:active {
   opacity: 0.3;
 }
 
-/* PAGE CATALOG */
+/* NEXT PAGE - CATALOG */
 
 /*-------------------------BREADCRUMBS-------------------------*/
 
@@ -473,17 +500,23 @@ opacity: 1;
   list-style: none;
 }
 
-.sort-list a{
+.sort-link,
+.sort-item {
   color: #000000;
   opacity: 0.3;
 }
 
-.sort-list a:hover {
+.sort-link:hover {
   opacity: 0.6;
 }
 
-.sort-list a:active {
+.sort-link:active {
   opacity: 1;
+}
+
+.sort-current {
+  opacity: 1;
+  cursor: default;
 }
 
 .sort-item {
@@ -499,14 +532,14 @@ opacity: 1;
 }
 
 .increase {
-  background: url('../img/icon-up-dir.svg') no-repeat;
+  background: url("../img/icon-up-dir.svg") no-repeat;
   width: 11px;
   height: 10px;
   padding: 15px;
 }
 
 .decrease {
-  background: url('../img/icon-down-dir.svg') no-repeat;
+  background: url("../img/icon-down-dir.svg") no-repeat;
   width: 11px;
   height: 10px;
   padding: 15px;
@@ -538,7 +571,7 @@ opacity: 1;
 }
 
 .filters-color label::before {
-  background: url('../img/checkbox-off.svg') no-repeat;
+  background: url("../img/checkbox-off.svg") no-repeat;
   content: "";
   width: 23px;
   height: 23px;
@@ -546,7 +579,7 @@ opacity: 1;
 }
 
 .filters-bluetooth label::before {
-  background: url('../img/radio-off.svg') no-repeat;
+  background: url("../img/radio-off.svg") no-repeat;
   content: "";
   width: 25px;
   height: 25px;
@@ -558,7 +591,7 @@ label:hover::before {
 }
 
 .filters-color label:checked::before {
-  background: url('../img/checkbox-on.svg') no-repeat;
+  background: url("../img/checkbox-on.svg") no-repeat;
   content: "";
   width: 27px;
   height: 23px;
@@ -607,7 +640,7 @@ label:hover::before {
   opacity: 0.3;
 }
 
-.pagination-list .current {
+.pagination-current {
   opacity: 1;
 }
 
@@ -616,10 +649,10 @@ label:hover::before {
   padding: 20px;
 }
 
-.pagination-switch:hover {
+.pagination-switch:not(.pagination-back):hover {
   background-color: #d9d9d9;
 }
 
-.pagination-switch:active {
+.pagination-switch:not(.pagination-back):active {
   opacity: 0.3;
 }
