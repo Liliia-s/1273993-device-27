@@ -30,6 +30,22 @@
        url("../fonts/opensans.woff") format("woff");
  }
 
+ body > * {
+  background: rgba(255, 0, 0, 0.3);
+}
+
+body > * > * {
+  background: rgba(255, 255, 0, 0.3);
+}
+
+body > * > * > * {
+  background: rgba(0, 0, 255, 0.3);
+}
+
+body > * > * > * > * {
+  background: rgba(0, 255, 255, 0.3);
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -39,6 +55,12 @@ body {
   font-weight: 300;
   color: #000000;
   background-color: #ffffff;
+}
+
+.container {
+  width: 1440px;
+  margin: 0 auto;
+  padding: 0 140px; /*переопределить 140px для сервиса и футера*/
 }
 
 a {
@@ -71,6 +93,20 @@ html {
 
 /*-------------------------HEADER-LOGO-------------------------*/
 
+.main-header {
+  position: relative;
+  background-color: #f7e296;
+  margin-top: 40px;
+  /* display: flex; */
+}
+
+.header-logo,
+.header-logo-index {
+  position: absolute;
+  margin-left: 60px;
+  top: -18px;
+}
+
 .header-logo[href]:hover,
 .header-logo[href]:focus {
   opacity: 0.6;
@@ -80,12 +116,11 @@ html {
   opacity: 0.3;
 }
 
-.header-logo img {
+.header-logo[href] img {
   pointer-events: none;
 }
 
-
-/*-------------------------HEADER USER-NAV-------------------------*/
+/*-------------------------HEADER USER-NAV-HEADER-------------------------*/
 
 .user-nav-header,
 .main-nav,
@@ -105,11 +140,11 @@ html {
   opacity: 0.3;
 }
 
-/*-------------------------HEADER MAIN-NAV-------------------------*/
+.header-search {
 
-.main-header {
-  background-color: #f7e296;
 }
+
+/*-------------------------HEADER MAIN-NAV-------------------------*/
 
 .main-nav > li > a {
   font-family: "Gilroy", "Arial", sans-serif;
