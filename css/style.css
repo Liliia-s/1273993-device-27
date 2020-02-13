@@ -140,8 +140,36 @@ html {
   opacity: 0.3;
 }
 
-.header-search {
+.user-nav-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+}
 
+.header-enter {
+  margin-left: 400px;
+}
+
+.header-compare {
+  margin-right: 35px;
+}
+
+.header-basket {
+  margin-right: 61px;
+}
+
+.header-search {
+  padding: 42px 0px 0px 59px;
+  max-width: 442px;
+}
+.header-search::before {
+  position: absolute;
+  content: "";
+  background: url("../img/search.svg") no-repeat;
+  width: 16px;
+  height: 16px;
+  padding-left: 63px;
 }
 
 /*-------------------------HEADER MAIN-NAV-------------------------*/
