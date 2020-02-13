@@ -149,8 +149,9 @@ html {
 }
 
 .header-search {
-  margin-right: 68px;
-  padding: 42px 0px 0px 63px;
+  /* margin-right: 68px; */
+  /* padding: 42px 0px 0px 63px; */
+  /* padding-left: 40px; */
   width: 500px;
 }
 
