@@ -286,6 +286,15 @@ html {
   opacity: 0.3;
 }
 
+.main-header::after {
+  position: absolute;
+  content: "";
+  border: solid 4px #ffffff;
+  width: 100px;
+  right: 460px;
+  bottom: 66px;
+}
+
 /*-------------------------MAIN SLIDERS-------------------------*/
 
 .sliders-list {
@@ -324,7 +333,26 @@ html {
 }
 
 .sliders-list-self h2 {
+  padding-left: 599px;
+  margin-top: -32px;
+  letter-spacing: 0.6px;
+}
 
+.sliders-list-self p {
+  margin-left: 600px;
+  margin-top: -20px;
+  width: 480px;
+  letter-spacing: 0.1px;
+}
+
+.sliders-list-self::before {
+  position: absolute;
+  content: "";
+  width: 166px;
+  height: 131px;
+  background: url("../img/01.png") no-repeat;
+  right: 60px;
+  top: -102px;
 }
 
 .button {
@@ -335,6 +363,14 @@ html {
   color: #000000;
   background-color: #f0c52e;
   border: none;
+}
+
+.sliders-button {
+  position: absolute;
+  content: "";
+  width: 220px;
+  left: 600px;
+  top: 202px;
 }
 
 .button:hover {
