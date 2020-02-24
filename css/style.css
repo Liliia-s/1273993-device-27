@@ -297,6 +297,10 @@ html {
 
 /*-------------------------MAIN SLIDERS-------------------------*/
 
+.sliders {
+  margin-bottom: 208px;
+}
+
 .sliders-list {
   padding: 0;
   margin: 0;
@@ -375,7 +379,7 @@ html {
   position: absolute;
   content: "";
   width: 220px;
-  left: 600px;
+  left: 601px;
   top: 210px;
 }
 
@@ -397,7 +401,7 @@ html {
   font-size: 36px;
   line-height: 48px;
   font-weight: 300;
-  padding-right: 83px;
+  padding-right: 76px;
 }
 
 .product-properties th {
@@ -405,6 +409,8 @@ html {
   font-size: 13px;
   line-height: 20px;
   font-weight: 300;
+  padding-top: 5px;
+  padding-left: 3px;
 }
 
 /*-------------------------CATEGORY TOP-------------------------*/
@@ -413,6 +419,8 @@ html {
   display: flex;
   justify-content: space-between;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .category-top-list a {
@@ -430,6 +438,25 @@ html {
 
 .category-top-list a:active {
   color: rgba(0, 0, 0, 0.3);
+}
+
+.category-virtual::before {
+  display: block; 
+  position: relative;
+  top: -46px;
+  left: -9px;
+  content: "";
+  background: url("../img/popular-1.svg") no-repeat;
+  width: 97px;
+  height: 55px;
+  padding: 50px 50px 40px 50px;
+}
+
+li.category-virtual {
+  display: inline-block;
+  width: 114px;
+
+
 }
 
 /*-------------------------SERVICES-------------------------*/
