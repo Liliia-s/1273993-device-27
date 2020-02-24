@@ -444,12 +444,12 @@ html {
   display: block; 
   position: relative;
   top: -46px;
-  left: -9px;
+  left: 31px;
   content: "";
-  background: url("../img/popular-1.svg") no-repeat;
+  background: url("../img/popular-1.svg") 50% #f0c52e no-repeat;
   width: 97px;
   height: 55px;
-  padding: 50px 50px 40px 50px;
+  padding: 100px;
 }
 
 li.category-virtual {
