@@ -323,6 +323,7 @@ html {
   position: relative;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 .sliders-list-self img {
   position: absolute;
@@ -331,15 +332,17 @@ html {
   height: 486px;
   margin: -111px 0px 0px 90px;
 }
-
+.sliders-content {
+  width: 564px;
+}
 .sliders-list-self h2 {
-  padding-left: 599px;
+  padding-left: 3px;
   margin-top: -32px;
-  letter-spacing: 0.6px;
+  letter-spacing: 0.5px;
 }
 
 .sliders-list-self p {
-  margin-left: 600px;
+  margin-left: 3px;
   margin-top: -20px;
   width: 480px;
   letter-spacing: 0.1px;
@@ -358,8 +361,11 @@ html {
 .button {
   font-family: "Gilroy", "Arial", sans-serif;
   font-size: 18px;
+  text-transform: uppercase;
+  text-align: center;
   line-height: 24px;
   font-weight: 900;
+  letter-spacing: 3.5px;
   color: #000000;
   background-color: #f0c52e;
   border: none;
@@ -370,7 +376,7 @@ html {
   content: "";
   width: 220px;
   left: 600px;
-  top: 202px;
+  top: 210px;
 }
 
 .button:hover {
@@ -381,11 +387,17 @@ html {
   color: rgba(0, 0, 0, 0.3);
 }
 
+.product-properties {
+  /* margin-left: 600px; */
+  margin-top: 130px;
+}
+
 .product-properties td {
   font-family: "Gilroy", "Arial", sans-serif;
   font-size: 36px;
   line-height: 48px;
   font-weight: 300;
+  padding-right: 83px;
 }
 
 .product-properties th {
