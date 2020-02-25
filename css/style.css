@@ -424,10 +424,14 @@ html {
 }
 
 .category-top-list a {
+  display: block;
+  position: relative;
+  width: 160px;
   font-family: "Gilroy", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: 900;
+  letter-spacing: 0.5px;
   color: #000000;
 }
 
@@ -440,24 +444,47 @@ html {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.category-virtual::before {
-  display: block; 
-  position: relative;
-  top: -46px;
-  left: 31px;
+
+.category-virtual a {
+  padding-top: 95px;
+}
+
+
+/* .category-virtual a {
+  padding-top: 95px;
+} */
+
+.category-virtual a::before {
+  position: absolute;
   content: "";
-  background: url("../img/popular-1.svg") 50% #f0c52e no-repeat;
-  width: 97px;
-  height: 55px;
-  padding: 100px;
+  top: -98px;
+  background: url(../img/popular-1.svg) 50% #f0c52e no-repeat;
+  width: 160px;
+  height: 160px;
 }
 
-li.category-virtual {
-  display: inline-block;
-  width: 114px;
 
-
+.category-self a::before {
+  position: absolute;
+  content: "";
+  top: -98px;
+  background: url(../img/popular-2.svg) 30% #f0c52e no-repeat;
+  width: 160px;
+  height: 160px;
 }
+
+
+/* .category-virtual a::before {
+  display: block;
+  position: relative;
+  top: -98px;
+  content: "";
+  background: url(../img/popular-1.svg) 50% #f0c52e no-repeat;
+  width: 160px;
+  height: 160px;
+} */
+
+
 
 /*-------------------------SERVICES-------------------------*/
 
