@@ -94,16 +94,14 @@ html {
 /*-------------------------HEADER-LOGO-------------------------*/
 
 .main-header {
-  position: relative;
-  background-color: #f7e296;
-  margin-top: 40px;
-  padding: 20px 27px 145px 60px;
+  background-image: linear-gradient(#ffffff 12%, #f7e296 12%, #f7e296 100%);
+  padding: 0px 27px 47px 60px;
 }
 
 .header-logo,
 .header-logo-index {
   position: absolute;
-  top: -18px;
+  top: 21px;
 }
 
 .header-logo[href]:hover,
@@ -130,7 +128,7 @@ html {
 .user-nav-header {
   display: flex;
   flex-wrap: wrap;
-  margin: 23px 0px 36px;
+  padding-top: 68px;
 }
 
 .user-nav-header a {
@@ -232,6 +230,8 @@ html {
   display: flex;
   flex-wrap: wrap;
   padding: 0;
+  margin: 0;
+  margin-top: 36px;
 }
 
 .main-nav-item {
@@ -273,6 +273,11 @@ html {
 
 }
 
+.nav-catalog-list {
+  margin: 0;
+  padding: 0;
+}
+
 .nav-catalog-list a {
   display: none;
   font-family: "OpenSans", "Arial", sans-serif;
@@ -291,14 +296,15 @@ html {
   content: "";
   border: solid 4px #ffffff;
   width: 100px;
-  right: 460px;
-  bottom: 66px;
+  right: 532px;
+  top: 265px;
 }
 
 /*-------------------------MAIN SLIDERS-------------------------*/
 
 .sliders {
-  margin-bottom: 208px;
+  background-image: linear-gradient(#f7e296 23%, #ffffff 23%, #ffffff 100%);
+  margin-bottom: 110px;
 }
 
 .sliders-list {
@@ -312,6 +318,9 @@ html {
   font-size: 47px;
   line-height: 56px;
   font-weight: 900;
+  margin: 0;
+  margin-bottom: 39px;
+  padding: 0;
 }
 
 .sliders p {
@@ -334,22 +343,21 @@ html {
   content: "";
   width: 384px;
   height: 486px;
-  margin: -111px 0px 0px 90px;
+  margin: 2px 0px 0px 90px;
 }
 .sliders-content {
   width: 564px;
 }
 .sliders-list-self h2 {
   padding-left: 3px;
-  margin-top: -32px;
+  margin-top: 81px;
   letter-spacing: 0.5px;
 }
 
 .sliders-list-self p {
   margin-left: 3px;
   margin-top: -20px;
-  width: 480px;
-  letter-spacing: 0.1px;
+  letter-spacing: 0.17px;
 }
 
 .sliders-list-self::before {
@@ -359,7 +367,7 @@ html {
   height: 131px;
   background: url("../img/01.png") no-repeat;
   right: 60px;
-  top: -102px;
+  top: 11px;
 }
 
 .button {
@@ -380,7 +388,7 @@ html {
   content: "";
   width: 220px;
   left: 601px;
-  top: 210px;
+  top: 323px;
 }
 
 .button:hover {
@@ -413,6 +421,37 @@ html {
   padding-left: 3px;
 }
 
+.slider-controls label {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 21px;
+  background-color: transparent;
+  border: 1px solid #000000;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-controls {
+  position: absolute;
+  top: 555px;
+  right: 134px;
+  font-size: 0;
+}
+
+#product-1:checked ~ .sliders #slide1,
+#product-2:checked ~ .sliders #slide2,
+#product-3:checked ~ .sliders #slide3 {
+  display: block;
+}
+
+#product-1:checked ~ .sliders label[for="product-1"],
+#product-2:checked ~ .sliders label[for="product-2"],
+#product-3:checked ~ .sliders label[for="product-3"] {
+  background-color: transparent;
+}
+
+
 /*-------------------------CATEGORY TOP-------------------------*/
 
 .category-top-list {
@@ -431,49 +470,82 @@ html {
   font-size: 18px;
   line-height: 24px;
   font-weight: 900;
-  letter-spacing: 0.5px;
   color: #000000;
+  padding-top: 193px;
 }
-
-/* Разобраться с фото
-.category-top-list a:hover {
-  color: rgba(0, 0, 0, 0.3);
-} */
 
 .category-top-list a:active {
   color: rgba(0, 0, 0, 0.3);
 }
 
-
 .category-virtual a {
-  padding-top: 95px;
+letter-spacing: 0.5px;
 }
-
-
-/* .category-virtual a {
-  padding-top: 95px;
-} */
 
 .category-virtual a::before {
   position: absolute;
   content: "";
-  top: -98px;
-  background: url(../img/popular-1.svg) 50% #f0c52e no-repeat;
+  top: 0;
+  left: 0;
+  background: url(../img/popular-1.svg) 49% 49% #f0c52e no-repeat;
   width: 160px;
   height: 160px;
 }
 
+.category-self a {
+  padding-right: 35px;
+  letter-spacing: 0.4px;
+}
 
 .category-self a::before {
   position: absolute;
   content: "";
-  top: -98px;
-  background: url(../img/popular-2.svg) 30% #f0c52e no-repeat;
+  top: 0;
+  left: 0;
+  background: url(../img/popular-2.svg) 52% 95% #f0c52e no-repeat;
   width: 160px;
   height: 160px;
 }
 
+.category-camera a::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  background: url(../img/popular-3.svg) 55% 52% #f0c52e no-repeat;
+  width: 160px;
+  height: 160px;
+}
 
+.category-fitnes a::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  background: url(../img/popular-4.svg) 52% 53% #f0c52e no-repeat;
+  width: 160px;
+  height: 160px;
+}
+
+.category-watch a::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  background: url(../img/popular-5.svg) 53% 52% #f0c52e no-repeat;
+  width: 160px;
+  height: 160px;
+}
+
+.category-cuadro a::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  background: url(../img/popular-6.svg) 48% 54% #f0c52e no-repeat;
+  width: 160px;
+  height: 160px;
+}
 /* .category-virtual a::before {
   display: block;
   position: relative;
