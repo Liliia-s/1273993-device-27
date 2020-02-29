@@ -306,10 +306,10 @@ html {
 
 .sliders {
   position: relative;
-  background-image: linear-gradient(#f7e296 23%, #ffffff 23%, #ffffff 100%);
-  margin-bottom: 97px;
+  /* background-image: linear-gradient(red 23%, #ffffff 23%, #ffffff 100%); */
+  background-image: linear-gradient(#f7e296 113px, #ffffff 113px);
 }
-
+/* #f7e296 */
 .sliders-list {
   padding: 0;
   margin: 0;
@@ -322,7 +322,7 @@ html {
   line-height: 56px;
   font-weight: 900;
   margin: 0;
-  margin-bottom: 39px;
+  /* margin-bottom: 39px; */
   padding: 0;
 }
 
@@ -330,34 +330,66 @@ html {
   max-width: 490px;
 }
 
-.sliders-list-self  {
+/* стилизация slide-1 */
+
+.slide  {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+}
+
+.sliders-list-self {
+  margin-bottom: 97px;
+}
+
+.sliders-list-fit {
+  margin-bottom: 86px;
+}
+
+.sliders-list-quadro {
+  margin-bottom: 97px;
 }
 
 .sliders-list-self img {
   width: 384px;
-  height: 486px;
   margin: 2px 0px 0px 90px;
   padding: 0;
 }
 
+.sliders-list-fit img {
+  width: 345px;
+  margin: 14px 0px 0px 116px;
+  padding: 0;
+}
+
+.sliders-list-quadro img {
+  width: 526px;
+  margin: 67px 0px 0px 31px;  
+  padding: 0;
+}
+
 .sliders-content {
-  max-width: 564px;
+  max-width: 700px;
 }
 
 .sliders-list-self h2 {
-  padding-left: 3px;
-  margin-top: 81px;
+  margin: 81px 0px 19px 125px;
   letter-spacing: 0.5px;
 }
 
+.sliders-list-fit h2 {
+  margin: 81px 0px 19px 138px;
+  letter-spacing: 0.6px;
+}
+
 .sliders-list-self p {
-  margin-left: 3px;
-  margin-top: -20px;
+  margin-left: 125px;
   letter-spacing: 0.17px;
+}
+
+.sliders-list-fit p {
+  margin-left: 138px;
+  letter-spacing: 0.15px;
 }
 
 .sliders-list-self::before {
@@ -367,6 +399,26 @@ html {
   height: 131px;
   background: url("../img/01.png") no-repeat;
   right: 60px;
+  top: 11px;
+}
+
+.sliders-list-fit::before {
+  position: absolute;
+  content: "";
+  width: 198px;
+  height: 131px;
+  background: url("../img/02.png") no-repeat;
+  right: 54px;
+  top: 11px;
+}
+
+.sliders-list-quadro::before {
+  position: absolute;
+  content: "";
+  width: 201px;
+  height: 131px;
+  background: url("../img/03.png") no-repeat;
+  right: 53px;
   top: 11px;
 }
 
@@ -398,8 +450,17 @@ html {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.product-properties {
-  margin-top: 130px;
+.self-properties {
+  margin: 130px 0px 0px 122px;
+
+}
+
+.fit-properties {
+  margin: 130px 0px 0px 136px;
+}
+
+.quadro-properties {
+  margin: 85px 0px 0px 135px;
 }
 
 .product-properties td {
@@ -418,6 +479,10 @@ html {
   padding-top: 5px;
   padding-left: 3px;
 }
+
+/* стилизация slide-2 */
+
+/* стилизация slide-3 */
 
 .slide {
   display: none;
@@ -445,7 +510,7 @@ html {
 #product-1:checked ~ .sliders-wrapper #slide-1,
 #product-2:checked ~ .sliders-wrapper #slide-2,
 #product-3:checked ~ .sliders-wrapper #slide-3 {
-  display: block;
+  display: flex;
 }
 
 #product-1:checked ~ .sliders-wrapper label[for="product-1"],
