@@ -94,6 +94,7 @@ html {
 /*-------------------------HEADER-LOGO-------------------------*/
 
 .main-header {
+  position: relative;
   background-image: linear-gradient(#ffffff 12%, #f7e296 12%, #f7e296 100%);
   padding: 0px 27px 47px 60px;
 }
@@ -101,7 +102,7 @@ html {
 .header-logo,
 .header-logo-index {
   position: absolute;
-  top: 21px;
+  top: 6px;
 }
 
 .header-logo[href]:hover,
@@ -296,22 +297,30 @@ html {
   content: "";
   border: solid 4px #ffffff;
   width: 100px;
-  right: 532px;
-  top: 265px;
+  right: 461px;
+  top: 250px;
+  z-index: 2;
 }
 
 /*-------------------------MAIN SLIDERS-------------------------*/
 
 .sliders {
+  position: relative;
   background-image: linear-gradient(#f7e296 23%, #ffffff 23%, #ffffff 100%);
-  margin-bottom: 110px;
+  margin-bottom: 97px;
 }
 
 .sliders-list {
   padding: 0;
   margin: 0;
   list-style: none;
+  z-index: 15;
+
 }
+/* 
+.slide {
+  display: none;
+} */
 
 .sliders h2 {
   font-family: "Gilroy", "Arial", sans-serif;
@@ -327,27 +336,31 @@ html {
   max-width: 490px;
 }
 
-.sliders-list-fit,
-.sliders-list-quadro {
-  display: none;
-}
-
-.sliders-list-self {
+.sliders-list-self  {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  /* z-index: 30; */
 }
 .sliders-list-self img {
-  position: absolute;
-  content: "";
+  /* position: absolute; */
   width: 384px;
   height: 486px;
   margin: 2px 0px 0px 90px;
+  padding: 0;
 }
+
+/* .sliders-photo {
+  margin: 0;
+  padding: 0;
+  max-width: 500px;
+} */
+
 .sliders-content {
-  width: 564px;
+  max-width: 564px;
 }
+
 .sliders-list-self h2 {
   padding-left: 3px;
   margin-top: 81px;
@@ -385,7 +398,7 @@ html {
 
 .sliders-button {
   position: absolute;
-  content: "";
+  /* content: ""; */
   width: 220px;
   left: 601px;
   top: 323px;
@@ -421,6 +434,10 @@ html {
   padding-left: 3px;
 }
 
+.slide {
+  display: none;
+}
+
 .slider-controls label {
   display: inline-block;
   width: 12px;
@@ -434,21 +451,22 @@ html {
 
 .slider-controls {
   position: absolute;
-  top: 555px;
-  right: 134px;
+  top: 329px;
+  right: 62px;  
   font-size: 0;
+  z-index: 50;
 }
 
-#product-1:checked ~ .sliders #slide1,
-#product-2:checked ~ .sliders #slide2,
-#product-3:checked ~ .sliders #slide3 {
+#product-1:checked ~ .sliders-wrapper #slide-1,
+#product-2:checked ~ .sliders-wrapper #slide-2,
+#product-3:checked ~ .sliders-wrapper #slide-3 {
   display: block;
 }
 
-#product-1:checked ~ .sliders label[for="product-1"],
-#product-2:checked ~ .sliders label[for="product-2"],
-#product-3:checked ~ .sliders label[for="product-3"] {
-  background-color: transparent;
+#product-1:checked ~ .sliders-wrapper label[for="product-1"],
+#product-2:checked ~ .sliders-wrapper label[for="product-2"],
+#product-3:checked ~ .sliders-wrapper label[for="product-3"] {
+  background-color: red;
 }
 
 
