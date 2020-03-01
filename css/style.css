@@ -532,6 +532,10 @@ html {
 
 /*-------------------------CATEGORY TOP-------------------------*/
 
+.category-top {
+  margin-bottom: 155px;
+}
+
 .category-top-list {
   display: flex;
   justify-content: space-between;
@@ -624,29 +628,140 @@ letter-spacing: 0.5px;
   width: 160px;
   height: 160px;
 }
-/* .category-virtual a::before {
-  display: block;
-  position: relative;
-  top: -98px;
-  content: "";
-  background: url(../img/popular-1.svg) 50% #f0c52e no-repeat;
-  width: 160px;
-  height: 160px;
-} */
-
-
 
 /*-------------------------SERVICES-------------------------*/
 
-.services-button-list,
 .services-list {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  margin-left: 100px;
   list-style: none;
 }
 
-.button-serv:active {
-  color: #f7e184;
-  background-color: #000000;
+.services {
+  display: flex;  
+  flex-wrap: wrap;
 }
+
+.services-list h3 {
+  font-family: Gilroy;
+  font-size: 47px;
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: 1px;
+  text-align: left;
+  color: #000000;
+  margin: 0 0 31px 2px;
+}
+
+.services-list p {
+  max-width: 445px;
+  letter-spacing: 0.3px;
+  margin: 0;
+}
+
+.controls-delivery {
+  margin-top: 6px;
+  padding: 9px 0 8px 18px;
+}
+
+.controls-guarantee {
+  padding: 9px 0 8px 25px;
+}
+
+.controls-credit {
+  padding: 10px 0 8px 37px;
+}
+
+.service-delivery,
+.service-guarantee,
+.service-credit {
+  position: relative;
+}
+
+.service-delivery::after {
+  position: absolute;
+  content: "";
+  background: url("../img/delivery.svg") no-repeat;
+  width: 136px;
+  padding: 80px;
+  left: 559px;
+  top: 11px;
+}
+
+.service-guarantee::after {
+  position: absolute;
+  content: "";
+  background: url("../img/warranty.svg") no-repeat;
+  width: 171px;
+  padding: 100px;
+  left: 544px;
+  top: -13px;
+}
+
+.service-credit::after {
+  position: absolute;
+  content: "";
+  background: url("../img/credit.svg") no-repeat;
+  width: 156px;
+  padding: 100px;
+  left: 535px;
+  top: -13px;
+}
+
+.services-controls label {
+  display: block;
+  width: 278px;
+  margin-right: 21px;
+  color: black;
+  background-color: #f0c52e;
+  cursor: pointer;
+  margin-bottom: 24px;
+  font-family: Gilroy;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.33;
+  letter-spacing: 3.6px;
+  text-transform: uppercase;
+}
+
+.services-controls {
+  position: relative;
+}
+
+.services-controls::after {
+  position: absolute;
+  content: "";
+  width: 7px;
+  height: 319px;
+  background-color: #000000;
+  left: 277px;
+  top: -74px;
+}
+
+.service {
+  display: none;
+}
+
+#service-1:checked ~ .services-wrapper #service1,
+#service-2:checked ~ .services-wrapper #service2,
+#service-3:checked ~ .services-wrapper #service3 {
+  display: block;
+}
+
+#service-1:checked ~ .services-wrapper label[for="service-1"],
+#service-2:checked ~ .services-wrapper label[for="service-2"],
+#service-3:checked ~ .services-wrapper label[for="service-3"] {
+  color: #f0c52e;
+  background-color: black;
+}
+
+.services-wrapper {
+  margin-bottom: 210px;
+  background-image: linear-gradient(#ffffff 26px, #e5e5e5 26px);
+}
+
 
 /*-------------------------PARTNERS-------------------------*/
 

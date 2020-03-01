@@ -37,9 +37,9 @@
     </nav>
   </header>
   <main>
-    <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
-    <input class="visually-hidden" type="radio" id="product-2" name="toggle">
-    <input class="visually-hidden" type="radio" id="product-3" name="toggle">
+    <input class="visually-hidden" type="radio" id="product-1" name="toggle-sliders" checked>
+    <input class="visually-hidden" type="radio" id="product-2" name="toggle-sliders">
+    <input class="visually-hidden" type="radio" id="product-3" name="toggle-sliders">
     <div class="sliders-wrapper">
       <section class="sliders">
         <h1 class="visually-hidden">Интернет-магазин электроники Device</h1>
@@ -128,37 +128,42 @@
         <li class="category-cuadro"><a href="#">Квадрокоптеры</a></li>
       </ul>
     </section>
-    <section class="services">
-      <h2 class="visually-hidden">Сервисы Device</h2>
-      <ul class="services-button-list">
-        <li><a class="button button-serv" href="delivery.html">Доставка</a></li>
-        <li><a class="button button-serv" href="guarantee.html">Гарантия</a></li>
-        <li><a class="button button-serv" href="credit.html">Кредит</a></li>
-      </ul>
-      <ul class="services-list">
-        <li>
-          <h3>Доставка</h3>
-          <p>Мы с удовольствием доставим ваш товар прямо к вашему
-            подъезду совершенно бесплатно! Ведь мы неплохо
-            заработаем поднимая его на ваш этаж.
-          </p>
-        </li>
-        <li>
-          <h3>Гарантия</h3>
-          <p>Если из-за возгорания купленного у нас товара у вас сгорит дом
-            — не переживайте, мы выдадим вам новый.<br>
-            Товар, не дом, конечно же.
-          </p>
-        </li>
-        <li>
-          <h3>Кредит</h3>
-          <p>Залезть в долговую яму стало проще! Кредитные консультанты
-            подберут для вас наиболее выгодные
-            условия кредита. Выгодные для нашего банка, разумеется.
-          </p>
-        </li>
-      </ul>
-    </section>
+    <input class="visually-hidden" type="radio" id="service-1" name="toggle-services" checked>
+    <input class="visually-hidden" type="radio" id="service-2" name="toggle-services">
+    <input class="visually-hidden" type="radio" id="service-3" name="toggle-services">
+    <div class="services-wrapper">
+      <section class="services">
+        <h2 class="visually-hidden">Сервисы Device</h2>
+        <div class="services-controls">
+          <label class="controls-delivery" for="service-1">Доставка</label>
+          <label class="controls-guarantee" for="service-2">Гарантия</label>
+          <label class="controls-credit" for="service-3">Кредит</label>
+        </div>
+        <ul class="services-list">
+          <li class="service-delivery service" id="service1">
+            <h3>Доставка</h3>
+            <p>Мы с удовольствием доставим ваш товар прямо к вашему
+              подъезду совершенно бесплатно! Ведь мы неплохо
+              заработаем, поднимая его на ваш этаж.
+            </p>
+          </li>
+          <li class="service-guarantee service" id="service2">
+            <h3>Гарантия</h3>
+            <p>Если из-за возгорания купленного у нас товара у вас сгорит дом
+              — не переживайте, мы выдадим вам новый.<br>
+              Товар, не дом, конечно же.
+            </p>
+          </li>
+          <li class="service-credit service" id="service3">
+            <h3>Кредит</h3>
+            <p>Залезть в долговую яму стало проще! Кредитные консультанты
+              подберут для вас наиболее выгодные
+              условия кредита. Выгодные для нашего банка, разумеется.
+            </p>
+          </li>
+        </ul>
+      </section>
+    </div>
     <section class="partners">
       <h2 class="visually-hidden">Партнеры интернет-магазина Device</h2>
       <ul class="partners-list">
