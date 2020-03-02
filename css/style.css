@@ -60,7 +60,7 @@ body {
 .container {
   width: 1440px;
   margin: 0 auto;
-  padding: 0 140px; /*переопределить 140px для сервиса и футера*/
+  /* padding: 0 140px; */
 }
 
 a {
@@ -97,6 +97,7 @@ html {
   position: relative;
   background-image: linear-gradient(#ffffff 12%, #f7e296 12%, #f7e296 100%);
   padding: 0px 27px 47px 60px;
+  margin: 0 140px;
 }
 
 .header-logo,
@@ -304,6 +305,10 @@ html {
 
 /*-------------------------MAIN SLIDERS-------------------------*/
 
+.sliders-wrapper {
+  margin: 0 140px;
+}
+
 .sliders {
   position: relative;
   background-image: linear-gradient(#f7e296 113px, #ffffff 113px);
@@ -327,8 +332,6 @@ html {
 .sliders p {
   max-width: 490px;
 }
-
-/* стилизация slide-1 */
 
 .slide  {
   position: relative;
@@ -361,7 +364,6 @@ html {
 .sliders-list-quadro img {
   width: 526px;
   margin: 67px 0px 0px 31px;  
-  /* padding: 0; */
 }
 
 .sliders-content {
@@ -533,7 +535,7 @@ html {
 /*-------------------------CATEGORY TOP-------------------------*/
 
 .category-top {
-  margin-bottom: 155px;
+  margin: 0 140px 155px 140px;
 }
 
 .category-top-list {
@@ -631,6 +633,12 @@ letter-spacing: 0.5px;
 
 /*-------------------------SERVICES-------------------------*/
 
+.services-wrapper {
+  padding-bottom: 115px;
+  margin-bottom: 95px;
+  background-image: linear-gradient(#ffffff 26px, #e5e5e5 26px, #e5e5e5 340px);
+}
+
 .services-list {
   position: relative;
   padding: 0;
@@ -642,6 +650,7 @@ letter-spacing: 0.5px;
 .services {
   display: flex;  
   flex-wrap: wrap;
+  margin-left: 140px;
 }
 
 .services-list h3 {
@@ -744,30 +753,33 @@ letter-spacing: 0.5px;
   display: none;
 }
 
-#service-1:checked ~ .services-wrapper #service1,
-#service-2:checked ~ .services-wrapper #service2,
-#service-3:checked ~ .services-wrapper #service3 {
+#service-1:checked ~ .services #service1,
+#service-2:checked ~ .services #service2,
+#service-3:checked ~ .services #service3 {
   display: block;
 }
 
-#service-1:checked ~ .services-wrapper label[for="service-1"],
-#service-2:checked ~ .services-wrapper label[for="service-2"],
-#service-3:checked ~ .services-wrapper label[for="service-3"] {
+#service-1:checked ~ .services label[for="service-1"],
+#service-2:checked ~ .services label[for="service-2"],
+#service-3:checked ~ .services label[for="service-3"] {
   color: #f0c52e;
   background-color: black;
 }
 
-.services-wrapper {
-  margin-bottom: 210px;
-  background-image: linear-gradient(#ffffff 26px, #e5e5e5 26px);
-}
-
-
 /*-------------------------PARTNERS-------------------------*/
+
+.partners-wrapper {
+  margin: 0 140px;
+}
 
 .partners-list {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 83px;
 }
 
 .logo-dji:hover {
@@ -786,22 +798,138 @@ letter-spacing: 0.5px;
   background: url("../img/logo-4.png") no-repeat;
 }
 
-/*-------------------------FOOTER-------------------------*/
+/*-------------------------INFO-US-------------------------*/
+.info-us {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 140px 72px 140px;
+}
+
+.info-us h2 {
+  font-family: Gilroy;
+  font-size: 47px;
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: 0.47px;
+  text-align: left;
+  color: #000000;
+  padding-top: 15px;
+  padding-bottom: 3px;
+}
+
+.about-us {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  max-width: 490px;
+}
+
+.about-us::before {
+  position: absolute;
+  content: "";
+  border: 3.5px solid #000000;
+  width: 80px;
+  top: 0;
+}
+
+.about-us-stock {
+  max-width: 450px;
+  margin-bottom: 30px;
+  letter-spacing: 0.1px;
+}
+
+.about-us-delivery {
+  max-width: 475px;
+  margin-bottom: 71px;
+}
+
+.contacts-info {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  max-width: 570px;
+}
+
+.contacts-info::before {
+  position: absolute;
+  content: "";
+  border: 3.5px solid #000000;
+  width: 80px;
+  top: 0;
+  left: 10px;
+}
+
+.contacts-info h2 {
+  padding-left: 7px;
+}
+
+.delivery-list {
+  margin: 0;
+  margin-bottom: 65px;
+  padding: 0;
+  padding-left: 18px;
+  list-style: circle;
+}
+
+.delivery-list li {
+  font-family: Gilroy;
+  font-weight: 800;
+  margin-bottom: 10px;
+  padding-left: 17px;
+  letter-spacing: 0.8px;
+}
+
+.contacts-address {
+  padding-left: 8px;
+  letter-spacing: 0.1px;
+  margin-bottom: 39px;
+}
+
+.contacts-map {
+  padding-left: 10px;
+  margin-bottom: 65px;
+}
+
+.button-about-us {
+  margin-left: 23px;
+}
+
+.button-contacts-info{
+  margin-left: 51px;
+}
+
+/*-------------------------FOOTER----------------------------*/
 
 footer {
   background-color: #464646;
+  padding: 63px 0 58px 0px;
 }
 
-
-/*-------------------------FOOTER-NAV-------------------------*/
-
-.footer-nav {
+.footer-top,
+.footer-middle,
+.footer-bottom {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-left: 140px;
+}
+
+.user-nav-footer,
+.footer-nav,
+.social-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
-/*-------------------------FOOTER-LOGO-------------------------*/
+
+/*-------------------------FOOTER-TOP-------------------------*/
+.footer-top {
+  margin-bottom: 6px;
+}
+.footer-logo {
+  margin: 2px 663px 0 0;
+}
 
 .footer-logo:hover {
   opacity: 0.6;
@@ -811,32 +939,152 @@ footer {
   opacity: 0.3;
 }
 
-/*-------------------------ADRESS-------------------------*/
+.user-nav-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
-.adress {
+.user-nav-footer a {
+  padding-left: 34px; 
+}
+
+.user-item-footer {
+  margin-right: 30px;
+}
+
+.footer-enter,
+.footer-compare,
+.footer-basket {
+  position: relative;
+}
+
+.footer-enter::before {
+  position: absolute;
+  content: "";
+  background: url("../img/user-footer.svg") no-repeat;
+  width: 13px;
+  height: 12px;
+  left: 7px;
+  top: 4px;
+}
+
+.footer-compare::before {
+  position: absolute;
+  content: "";
+  background: url("../img/compare-footer.svg") no-repeat;
+  width: 13px;
+  height: 12px;
+  left: 14px;
+  top: 6px;
+}
+
+.footer-basket::before {
+  position: absolute;
+  content: "";
+  background: url("../img/basket-footer.svg") no-repeat;
+  width: 13px;
+  height: 12px;
+  left: 12px;
+  top: 4px;
+}
+
+.user-item-footer a{
   color: #ffffff;
 }
 
-/*-------------------------SOCIAL-------------------------*/
-
-.social {
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
+.user-item-footer a:hover {
+  opacity: 0.6;
 }
 
-.social a {
+.user-item-footer a:active {
+  opacity: 0.3;
+}
+
+/* у венеры спросить
+.user-nav-footer .exit {
+  opacity: 0.3;
+} */
+
+/*-------------------------FOOTER-MIDDLE-------------------------*/
+
+.footer-middle{
+  margin-bottom: 47px;
+}
+
+.address {
+  color: #ffffff;
+  margin: 15px 164px 0px 0px;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 18px;
+  margin-right: 166px;
+}
+
+.footer-nav a {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 900;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 3.6px;
+}
+
+.footer-nav li {
+  margin-right: 34px;
+}
+
+.footer-nav a:hover {
+  opacity: 0.6;
+}
+
+.footer-nav a:active {
+  opacity: 0.3;
+}
+
+.number-phone a {
+  color: #ffffff;
+}
+
+/*-------------------------FOOTER-BOTTOM-------------------------*/
+
+ .social-list {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 12px 459px 0 0px;
+  padding-left: 509px;
+}
+
+.social-list::before {
+  position: absolute;
+  content: "";
+  border: 3px solid #ffc600;
+  width: 80px;
+  left: 0px;
+  top: 3px;
+}
+
+.social-list li {
+  margin-right: 23px;
+}
+
+.social-list a {
   opacity: 0.3;
   width: 32px;
   height: 32px;
-  padding: 15px;
+  padding: 16px;
 }
 
-.social a:hover {
+.social-list a:hover {
   opacity: 1;
 }
 
-.social a:active {
+.social-list a:active {
   opacity: 0.1;
 }
 
@@ -850,58 +1098,6 @@ footer {
 
 .social-twitter {
   background: url("../img/twitter.svg") no-repeat;
-}
-
-/*-------------------------FOOTER-NAV--------------------------*/
-
-.footer-nav a {
-  font-family: "Gilroy", "Arial", sans-serif;
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 900;
-  color: #ffffff;
-  text-transform: uppercase;
-}
-
-.footer-nav a:hover {
-  opacity: 0.6;
-}
-
-.footer-nav a:active {
-  opacity: 0.3;
-}
-
-
-/*-------------------------USER-NAV-FOOTER--------------------------*/
-
-.user-nav-footer {
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
-}
-
-.user-item-footer a{
-  color: #ffffff;
-  opacity: 0.7;
-}
-
-.user-item-footer a:hover {
-  opacity: 1;
-}
-
-.user-item-footer a:active {
-  opacity: 0.3;
-}
-
-/* у венеры спросить */
-.user-nav-footer .exit {
-  opacity: 0.3;
-}
-
-/*-------------------------NUMBER-PHONE--------------------------*/
-
-.number-phone {
-  color: #ffffff;
 }
 
 /*-------------------------LOGO-ACADEMY-------------------------*/
