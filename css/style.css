@@ -100,6 +100,10 @@ html {
   margin: 0 140px;
 }
 
+.header-catalog {
+  margin: 0 140px 37px;
+}
+
 .header-logo,
 .header-logo-index {
   position: absolute;
@@ -165,6 +169,27 @@ html {
   position: relative;
   padding: 25px 30px;
   margin-right: 188px;
+}
+
+.header-exit {
+  padding: 25px 12px;
+  margin-right: 53px;
+  opacity: 0.3;
+}
+
+.header-user {
+  position: relative;
+  padding: 25px 10px 25px 29px;
+}
+
+.header-user::before {
+  position: absolute;
+  content: "";
+  background: url("../img/user.svg") no-repeat;
+  width: 13px;
+  height: 12px;
+  top: 29px;
+  left: 4px;
 }
 
 .header-enter::before {
@@ -530,7 +555,6 @@ html {
 #product-3:checked ~ .sliders-wrapper label[for="product-3"] {
   background-color: red;
 }
-
 
 /*-------------------------CATEGORY TOP-------------------------*/
 
@@ -899,6 +923,16 @@ letter-spacing: 0.5px;
   margin-left: 51px;
 }
 
+/*-------------------------STYLE OF THE CATALOG----------------------------*/
+/*-------------------------BREADCRUMBS----------------------------*/
+.catalog-subtitle {
+  font-family: Gilroy;
+  font-size: 47px;
+  font-weight: 800;
+  line-height: 48px;
+  letter-spacing: 0.7px;
+  margin-left: 199px;
+}
 /*-------------------------FOOTER----------------------------*/
 
 footer {

@@ -1,45 +1,43 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
-
-<body>
-  <header class="main-header">
-    <a class="header-logo" href="index.html">
-      <img src="img/logo-device.svg" width="164" height="35" alt="Логотип интернет-магазина Device">
-    </a>
-    <ul class="user-nav-header">
-      <li class="user-item-header header-search"></li>
-      <li class="user-item-header header-user"><a href="#">Валентин Петухов</a></li>
-      <li class="user-item-header header-enter"><a href="#">Выйти</a></li>
-      <li class="user-item-header header-compare"><a href="#">Сравнить</a></li>
-      <li class="user-item-header header-basket"><a href="#">Корзина</a></li>
-    </ul>
-    <nav class="nav">
-      <ul class="main-nav">
-        <li><a href="catalog.html" class="nav-catalog">Каталог товаров</a>
-          <ul class="nav-catalog-list">
-            <li><a href="#">Виртуальная реальность</a></li>
-            <li><a class="nav-catalog-current">Моноподы для селфи</a></li>
-            <li><a href="#">Экшн-камеры</a></li>
-            <li><a href="#">Фитнес-браслеты</a></li>
-            <li><a href="#">Умные часы</a></li>
-            <li><a href="#">Квадрокоптеры</a></li>
-          </ul>
-        </li>
-        <li><a href="delivery.html">Доставка</a></li>
-        <li><a href="guarantee.html">Гарантия</a></li>
-        <li><a href="contacts.html">Контакты</a></li>
+<body class="container">
+    <header class="main-header header-catalog">
+      <a href="index.html">
+        <img class="header-logo" src="img/logo-device.svg" width="164" height="35" alt="Логотип интернет-магазина Device">
+      </a>      
+      <ul class="user-nav-header">
+        <li class="user-item-header header-search">Поиск по сайту</li>
+        <li class="user-item-header"><a class="header-user" href="#">Валентин Петухов</a></li>
+        <li class="user-item-header"><a class="header-exit" href="#">Выйти</a></li>
+        <li class="user-item-header"><a class="header-compare" href="#">Сравнить</a></li>
+        <li class="user-item-header"><a class="header-basket" href="#">Корзина</a></li>
       </ul>
-    </nav>
-  </header>
+      <nav class="nav">
+        <ul class="main-nav">
+          <li><a class="nav-catalog main-nav-item" href="#">Каталог товаров</a>
+            <ul class="nav-catalog-list">
+              <li><a href="#">Виртуальная реальность</a></li>
+              <li><a href="catalog.html">Моноподы для селфи</a></li>
+              <li><a href="#">Экшн-камеры</a></li>
+              <li><a href="#">Фитнес-браслеты</a></li>
+              <li><a href="#">Умные часы</a></li>
+              <li><a href="#">Квадрокоптеры</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-delivery main-nav-item" href="delivery.html">Доставка</a></li>
+          <li><a class="nav-guarantee main-nav-item" href="guarantee.html">Гарантия</a></li>
+          <li><a class="nav-contacts main-nav-item" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </header>
   <main>
-    <h1>Моноподы для селфи</h1>
+    <h1 class="catalog-subtitle">Моноподы для селфи</h1>
     <ul class="breadcrumbs">
       <li class="breadcrumbs-item"><a href="index.html">Главная</a></li>
       <li class="breadcrumbs-item"><a href="catalog.html">Каталог товаров</a></li>
