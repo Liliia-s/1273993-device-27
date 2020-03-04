@@ -1278,6 +1278,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   margin: 0 0 0 201px;
+  background-image: linear-gradient(#ebebeb 30%, #ffffff 30%, #ffffff 100%) ;
 }
 
 /*-------------------------filters-wrapper-------------------------*/
