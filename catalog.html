@@ -52,8 +52,21 @@
         <div class="filters-wrapper">
         <h2 class="filters-name">Фильтр:</h2>
         <form class="filters-choice" action="https://echo.htmlacademy.ru" method="get">
-          <label for="range-field">Стоимость</label>
-          от 0 <input class="range-form" type="range" id="range-field" min="0" max="5000" step="1"> до 5000
+          <div class="filter-range">
+          <div class="filter-range-title">Стоимость</div>
+          <div class="range-controls">
+            <div class="scale">
+              <div class="bar"></div>
+            </div>
+            <div class="range-toggle range-toggle-min"></div>
+            <div class="range-toggle range-toggle-max"></div>
+          </div>
+          <div class="price-controls">
+            <label class="min-price">от <input type="number" name="min-price" value="0"></label>
+            <label class="max-price">до <input type="number" name="max-price" value="5000"></label>
+          </div>
+        </div> 
+        <div class="filter-checkbox">
           <fieldset class="filters-fieldset">
             <legend>Цвет</legend>
             <ul class="filters-color">
@@ -79,6 +92,8 @@
               </li>
             </ul>
           </fieldset>
+        </div>
+        <div class="filter-radio">
           <fieldset class="filters-fieldset">
             <legend>Bluetooth</legend>
             <ul class="filters-bluetooth">
@@ -93,22 +108,28 @@
               </li>
             </ul>
           </fieldset>
+        </div>
           <button class="button button-filters" type="submit">Показать</button>
         </form>
       </div>
       </section>
     <section class="sort">
+      <div class="sort-wrapper">
       <h2 class="visually-hidden">Сортировка товаров</h2>
       <p>Сортировка:</p>
       <ul class="sort-list">
         <li><a class="sort-current">По цене</a></li>
         <li><a class="sort-link" href="#">По типу</a></li>
         <li><a class="sort-link" href="#">По популярности</a></li>
-        <li><a class="sort-item increase" href="#"><span class="visually-hidden">По возрастанию</span></a></li>
-        <li><a class="sort-item decrease"><span class="visually-hidden">По убыванию</span></a></li>
       </ul>
+      <ul class="sort-increment">
+        <li><a class="sort-item sort-increase" href="#"><span class="visually-hidden">По возрастанию</span></a></li>
+        <li><a class="sort-decrease increment-current"><span class="visually-hidden">По убыванию</span></a></li>
+      </ul>
+    </div>
     </section>
     <section class="products">
+      <div class="products-wrapper">
       <h2 class="visually-hidden">Листинг товаров</h2>
       <ul class="products-list">
         <li class="products-item">
@@ -171,6 +192,7 @@
         <li class="pagination-item"><a href="#">3</a></li>
         <li><a class="pagination-switch" href="#">Вперед</a></li>
       </ul>
+      </div>
     </section>
   </div>
   </main>

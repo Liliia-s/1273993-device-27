@@ -1277,7 +1277,7 @@ footer {
 .catalog-wrapper {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 0 0 201px;
+  margin: 0;
   background-image: linear-gradient(#ebebeb 30%, #ffffff 30%, #ffffff 100%) ;
 }
 
@@ -1285,6 +1285,11 @@ footer {
 
 .filters {
   background-color: #eeeeee;
+  margin: 0 140px 0 199px;
+}
+
+.filters-wrapper {
+  width: 200px;
 }
 
 .filters-name {
@@ -1295,37 +1300,127 @@ footer {
   text-transform: uppercase;
   padding-top: 10px;
   letter-spacing: 3.5px;
+  margin-bottom: 93px;
 }
 
-.filters ul {
-  list-style: none;
-}
-
-.filters legend {
+.filters legend,
+.filter-range-title {
   font-family: "Gilroy", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: 900;
 }
 
+.filters-fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.filters ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  margin-bottom: 38px;
+}
+
+/*----------------filter-range----------------*/
+
+.filter-range {
+  border-top: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  margin-bottom: 10px;
+}
+
+.filter-range-title {
+  margin: 10px 0 35px 0;
+}
+
+.range-controls {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: #dbdbdb;
+}
+
+.range-controls .bar {
+  width: 54%;
+  height: 2px;
+  background: #91c92f;
+}
+
+.range-toggle {
+  position: absolute;
+  top: -9px;
+  width: 20px;
+  height: 20px;
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+.range-toggle-min {
+  left: -6px;
+}
+
+.range-toggle-max {
+  left: 54%;
+}
+
+.range-toggle:hover {
+  transform: scale(1.1);
+}
+
+.price-controls {
+  font-size: 0;
+  margin-bottom: 25px;
+}
+
+.price-controls label {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 24px;
+  cursor: pointer;
+  color: #dbdbdb;
+}
+
+.price-controls input {
+  text-align: left;
+  color: #dbdbdb;
+  max-width: 70px;
+  border: 0;
+  background: none;
+}
+
+/*----------------filters-color----------------*/
+
+.filter-checkbox {
+  margin-bottom: 10px;
+  border-bottom: 2px solid;
+}
+
+.filter-checkbox legend {
+  margin-bottom: 21px;
+}
+
+.filters-color label {
+  position: relative;
+  padding: 0 0 0px 38px;
+}
+
 .filters-color label::before {
+  position: absolute;
   background: url("../img/checkbox-off.svg") no-repeat;
   content: "";
-  width: 23px;
+  width: 23px;  
   height: 23px;
-  padding: 20px;
-}
-
-.filters-bluetooth label::before {
-  background: url("../img/radio-off.svg") no-repeat;
-  content: "";
-  width: 25px;
-  height: 25px;
-  padding: 20px;
-}
-
-label:hover::before {
-  opacity: 0.6;
+  left: 0;
+  top: 0;
 }
 
 .filters-color label:checked::before {
@@ -1334,13 +1429,54 @@ label:hover::before {
   width: 27px;
   height: 23px;
   padding: 20px;
+}
 
+label:hover::before {
+  opacity: 0.6;
+}
+
+li.filters-option {
+  margin-bottom: 10px;
+}
+
+
+/*----------------filters-bluetooth----------------*/
+
+.filter-radio {
+  margin-bottom: 5px;
+}
+
+.filter-radio legend {
+  margin-bottom: 21px;
+}
+
+.filters-bluetooth label {
+  position: relative;
+  padding: 0 0 0 38px;
+}
+
+.filters-bluetooth label::before {
+  position: absolute;
+  background: url("../img/radio-off.svg") no-repeat;
+  content: "";
+  width: 25px;
+  height: 25px;
+  padding: 20px;
+  top: 0;
+  left: 0;
+}
+
+.button-filters {
+  margin-left: 35px;
 }
 
 /*-------------------------SORT-------------------------*/
 
-.sort {
+.sort-wrapper {
   background-color: #eeeeee;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 8px;
 }
 
 .sort p {
@@ -1349,12 +1485,34 @@ label:hover::before {
   line-height: 24px;
   font-weight: 900;
   text-transform: uppercase;
+  letter-spacing: 3.8px;
+  margin-right: 50px;
+}
+
+.sort-wrapper ul {
+  list-style: none;
 }
 
 .sort-list {
   display: flex;
-  justify-content: space-between;
-  list-style: none;
+  flex-wrap: wrap;
+  margin: 11px 205px 0 0;
+  padding: 0;
+}
+
+.sort-increment {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 33px 0 0;
+  padding: 0;
+}
+
+.sort-list li {
+  margin-right: 26px;
+}
+
+.sort-item {
+  margin-top: 5px;
 }
 
 .sort-link,
@@ -1388,21 +1546,23 @@ label:hover::before {
   opacity: 1;
 }
 
-.increase {
+.sort-increase {
   background: url("../img/icon-up-dir.svg") no-repeat;
   width: 11px;
   height: 10px;
   padding: 15px;
 }
 
-.decrease {
+.sort-decrease {
   background: url("../img/icon-down-dir.svg") no-repeat;
   width: 11px;
   height: 10px;
   padding: 15px;
 }
 
-
+.increment-current {
+  opacity: 1;
+}
 
 /*-------------------------PRODUCTS-------------------------*/
 
@@ -1411,7 +1571,7 @@ label:hover::before {
 }
 .products-list {
   display: flex;
-  /* justify-content: space-around; */
+  flex-wrap: wrap;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -1428,6 +1588,13 @@ label:hover::before {
 .add-compare:active {
   opacity: 0.2;
 }
+
+/* .product {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+} */
 
 /*-------------------------PAGINATION-LIST-------------------------*/
 
