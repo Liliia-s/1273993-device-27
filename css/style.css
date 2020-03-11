@@ -952,7 +952,7 @@ footer {
   margin-bottom: 6px;
 }
 .footer-logo {
-  margin: 2px 663px 0 0;
+  margin: 2px 0 0 0;
 }
 
 .footer-logo:hover {
@@ -967,6 +967,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-left: auto;
 }
 
 .user-nav-footer a {
@@ -976,11 +977,26 @@ footer {
 .user-item-footer {
   margin-right: 30px;
 }
+.footer-enter {
+  margin-left: 152px; 
+}
 
 .footer-enter,
+.footer-exit,
 .footer-compare,
+.footer-user,
 .footer-basket {
   position: relative;
+}
+
+.footer-user::before {
+  position: absolute;
+  content: "";
+  background: url("../img/user-footer.svg") no-repeat;
+  width: 13px;
+  height: 12px;
+  top: 4px;
+  left: 4px;
 }
 
 .footer-enter::before {
@@ -1025,10 +1041,7 @@ footer {
   opacity: 0.3;
 }
 
-/* у венеры спросить
-.user-nav-footer .exit {
-  opacity: 0.3;
-} */
+
 
 /*-------------------------FOOTER-MIDDLE-------------------------*/
 
@@ -1412,7 +1425,7 @@ footer {
   padding: 0 0 0px 38px;
 }
 
-.filters-color label::before {
+.checkbox-form + label::before {
   position: absolute;
   background: url("../img/checkbox-off.svg") no-repeat;
   content: "";
@@ -1422,7 +1435,7 @@ footer {
   top: 0;
 }
 
-.filters-color label:checked::before {
+.checkbox-form:checked + label::before {
   background: url("../img/checkbox-on.svg") no-repeat;
   content: "";
   width: 27px;
@@ -1437,7 +1450,6 @@ label:hover::before {
 li.filters-option {
   margin-bottom: 10px;
 }
-
 
 /*----------------filters-bluetooth----------------*/
 
@@ -1454,7 +1466,7 @@ li.filters-option {
   padding: 0 0 0 38px;
 }
 
-.filters-bluetooth label::before {
+.radio-form + label::before {
   position: absolute;
   background: url("../img/radio-off.svg") no-repeat;
   content: "";
@@ -1463,6 +1475,17 @@ li.filters-option {
   padding: 20px;
   top: 0;
   left: 0;
+}
+
+.radio-form:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 9px;
+  height: 9px;
+  background-color: #000000;
+  border-radius: 50%;
 }
 
 .button-filters {
@@ -1655,6 +1678,14 @@ li.products-item {
   margin-right: 27px;
 }
 
+.pagination-item:not(.pagination-current):hover {
+  opacity: 0.6;
+}
+
+.pagination-item:not(.pagination-current):active {
+  opacity: 1;
+}
+
 .pagination-current {
   opacity: 1;
 }
@@ -1662,6 +1693,7 @@ li.products-item {
 .pagination-switch {
   text-transform: uppercase;
   padding: 25px;
+  padding: 27px 25px 24px 30px;
 }
 
 .pagination-switch:not(.pagination-back):hover {
@@ -1673,7 +1705,7 @@ li.products-item {
 }
 
 .pagination-back {
-  margin: 0 213px 0 5px;
+  margin-right: 213px;
 }
 
 .pagination-forward {
