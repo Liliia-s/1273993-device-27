@@ -1500,7 +1500,7 @@ li.filters-option {
   background-color: #eeeeee;
   display: flex;
   flex-wrap: wrap;
-  margin: 0px 0 70px 0;
+  margin-bottom: 60px;
   padding-top: 8px;
 }
 
@@ -1597,11 +1597,10 @@ li.filters-option {
   list-style: none;
   margin: 0;
   padding: 0;
-  margin-bottom: 14px;
 }
 
 li.products-item {
-  margin: 0px 40px 28px 0;
+  margin: 10px 40px 18px 0;
 }
 
 .products-info h3 {
@@ -1646,10 +1645,9 @@ li.products-item {
   font-weight: 900;
   background-color: rgba(0, 0, 0, 0.08);
   width: 760px;
-  margin: 0;
-  padding: 0;
+  margin: 0 0 77px 0;
+  padding: 25px 0 21px 0;
   letter-spacing: 3.7px;
-  margin-bottom: 99px;
 }
 
 .pagination-item {
