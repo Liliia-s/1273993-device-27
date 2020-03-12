@@ -58,9 +58,9 @@ body {
 }
 
 .container {
-  width: 1440px;
+  width: 1160px;
+  padding: 0 20px;
   margin: 0 auto;
-  /* padding: 0 140px; */
 }
 
 a {
@@ -97,11 +97,10 @@ html {
   position: relative;
   background-image: linear-gradient(#ffffff 12%, #f7e296 12%, #f7e296 100%);
   padding: 0px 27px 47px 60px;
-  margin: 0 140px;
 }
 
 .header-catalog {
-  margin: 0 140px 37px;
+  margin: 0 0 37px;
 }
 
 .header-logo,
@@ -330,10 +329,6 @@ html {
 
 /*-------------------------MAIN SLIDERS-------------------------*/
 
-.sliders-wrapper {
-  margin: 0 140px;
-}
-
 .sliders {
   position: relative;
   background-image: linear-gradient(#f7e296 113px, #ffffff 113px);
@@ -376,19 +371,19 @@ html {
 
 .sliders-list-self img {
   width: 384px;
-  margin: 2px 0px 0px 90px;
+  margin: 2px 0px 0px 71px;
   padding: 0;
 }
 
 .sliders-list-fit img {
   width: 345px;
-  margin: 14px 0px 0px 116px;
+  margin: 14px 0px 0px 98px;
   padding: 0;
 }
 
 .sliders-list-quadro img {
   width: 526px;
-  margin: 67px 0px 0px 31px;  
+  margin: 67px 0px 0px 12px;  
 }
 
 .sliders-content {
@@ -436,7 +431,7 @@ html {
   width: 166px;
   height: 131px;
   background: url("../img/01.png") no-repeat;
-  right: 60px;
+  right: 39px;
   top: 11px;
 }
 
@@ -446,7 +441,7 @@ html {
   width: 198px;
   height: 131px;
   background: url("../img/02.png") no-repeat;
-  right: 54px;
+  right: 33px;
   top: 11px;
 }
 
@@ -456,7 +451,7 @@ html {
   width: 201px;
   height: 131px;
   background: url("../img/03.png") no-repeat;
-  right: 53px;
+  right: 32px;
   top: 11px;
 }
 
@@ -476,7 +471,7 @@ html {
 .sliders-button {
   position: absolute;
   width: 220px;
-  left: 601px;
+  left: 581px;
   top: 323px;
 }
 
@@ -544,22 +539,22 @@ html {
   z-index: 20;
 }
 
-#product-1:checked ~ .sliders-wrapper #slide-1,
-#product-2:checked ~ .sliders-wrapper #slide-2,
-#product-3:checked ~ .sliders-wrapper #slide-3 {
+#product-1:checked ~ .sliders #slide-1,
+#product-2:checked ~ .sliders #slide-2,
+#product-3:checked ~ .sliders #slide-3 {
   display: flex;
 }
 
-#product-1:checked ~ .sliders-wrapper label[for="product-1"],
-#product-2:checked ~ .sliders-wrapper label[for="product-2"],
-#product-3:checked ~ .sliders-wrapper label[for="product-3"] {
+#product-1:checked ~ .sliders label[for="product-1"],
+#product-2:checked ~ .sliders label[for="product-2"],
+#product-3:checked ~ .sliders label[for="product-3"] {
   background-color: red;
 }
 
 /*-------------------------CATEGORY TOP-------------------------*/
 
 .category-top {
-  margin: 0 140px 155px 140px;
+  margin-bottom: 155px;
 }
 
 .category-top-list {
@@ -674,7 +669,6 @@ letter-spacing: 0.5px;
 .services {
   display: flex;  
   flex-wrap: wrap;
-  margin-left: 140px;
 }
 
 .services-list h3 {
@@ -792,10 +786,6 @@ letter-spacing: 0.5px;
 
 /*-------------------------PARTNERS-------------------------*/
 
-.partners-wrapper {
-  margin: 0 140px;
-}
-
 .partners-list {
   display: flex;
   flex-wrap: wrap;
@@ -827,7 +817,7 @@ letter-spacing: 0.5px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 0 140px 72px 140px;
+  margin-bottom: 72px;
 }
 
 .info-us h2 {
@@ -935,7 +925,6 @@ footer {
 .footer-bottom {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 140px;
 }
 
 .user-nav-footer,

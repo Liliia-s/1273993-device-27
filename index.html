@@ -8,8 +8,8 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body class="container">
-  <header class="main-header">
+<body>
+  <header class="main-header container">
     <img class="header-logo-index" src="img/logo-device.svg" width="164" height="35"
       alt="Логотип интернет-магазина Device">
     <ul class="user-nav-header">
@@ -40,8 +40,7 @@
     <input class="visually-hidden" type="radio" id="product-1" name="toggle-sliders" checked>
     <input class="visually-hidden" type="radio" id="product-2" name="toggle-sliders">
     <input class="visually-hidden" type="radio" id="product-3" name="toggle-sliders">
-    <div class="sliders-wrapper">
-      <section class="sliders">
+      <section class="sliders container">
         <h1 class="visually-hidden">Интернет-магазин электроники Device</h1>
         <div class="slider-controls">
           <label for="product-1">Первый</label>
@@ -116,8 +115,7 @@
           </li>
         </ul>
       </section>
-    </div>
-    <section class="category-top">
+    <section class="category-top container">
       <h2 class="visually-hidden">Категории товаров</h2>
       <ul class="category-top-list">
         <li class="category-virtual"><a href="#">Виртуальная реальность</a></li>
@@ -132,7 +130,7 @@
       <input class="visually-hidden" type="radio" id="service-1" name="toggle-services" checked>
       <input class="visually-hidden" type="radio" id="service-2" name="toggle-services">
       <input class="visually-hidden" type="radio" id="service-3" name="toggle-services">
-      <section class="services">
+      <section class="services container">
         <h2 class="visually-hidden">Сервисы Device</h2>
         <div class="services-controls">
           <label class="controls-delivery" for="service-1">Доставка</label>
@@ -164,8 +162,7 @@
         </ul>
       </section>
     </div>
-    <section class="partners">
-      <div class="partners-wrapper">
+    <section class="partners container">
         <h2 class="visually-hidden">Партнеры интернет-магазина Device</h2>
         <ul class="partners-list">
           <li class="partners-item logo-dji"><a href="#"><img src="img/logo-1-gray.png" width="260" height="100"
@@ -177,9 +174,8 @@
           <li class="partners-item logo-vive"><a href="#"><img src="img/logo-4-gray.png" width="260" height="100"
                 alt="Логотип Vive"></a></li>
         </ul>
-      </div>
     </section>
-    <div class="info-us">
+    <div class="info-us container">
       <section class="about-us">
         <h2>О нас</h2>
         <p class="about-us-stock">Огромный выбор гаджетов не оставит равнодушным гика,
@@ -205,6 +201,7 @@
     </div>
   </main>
   <footer>
+    <div class="container">
     <div class="footer-top">
       <p class="footer-logo">
         <a href="#">
@@ -235,6 +232,7 @@
       <a href="https://htmlacademy.ru/intensive/htmlcss"><img class="logo-academy" src="img/logo-html.svg" width="27"
           height="34" alt="Логотип HTML Academy"></a>
     </div>
+  </div>
   </footer>
   <section class="modal modal-feedback">
     <h2 class="visually-hidden">Напишите нам</h2>
