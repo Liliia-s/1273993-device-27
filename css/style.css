@@ -58,7 +58,7 @@ body {
 }
 
 .container {
-  width: 1160px;
+  width: 1200px;
   padding: 0 20px;
   margin: 0 auto;
 }
@@ -96,7 +96,8 @@ html {
 .main-header {
   position: relative;
   background-image: linear-gradient(#ffffff 12%, #f7e296 12%, #f7e296 100%);
-  padding: 0px 27px 47px 60px;
+  padding: 0px 60px 47px 60px;
+  margin-top: 11px;
 }
 
 .header-catalog {
@@ -106,7 +107,7 @@ html {
 .header-logo,
 .header-logo-index {
   position: absolute;
-  top: 6px;
+  top: 10px;
 }
 
 .header-logo[href]:hover,
@@ -128,12 +129,15 @@ html {
 .main-nav,
 .nav-catalog-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .user-nav-header {
   display: flex;
   flex-wrap: wrap;
-  padding-top: 68px;
+  justify-content: space-between;
+  padding-top: 72px;
 }
 
 .user-nav-header a {
@@ -148,10 +152,14 @@ html {
   opacity: 0.3;
 }
 
+.user-item-header {
+  margin-left: auto;
+}
+
 .header-search {
   position: relative;
-  margin-right: 50px;
-  width: 446px;
+  width: 440px;
+  padding-left: 40px;
 }
 
 .header-search::before {
@@ -160,19 +168,18 @@ html {
   background: url("../img/search.svg") no-repeat;
   width: 16px;
   height: 16px;
-  left: -37px;
+  left: 3px;
   top: 8px;
 }
 
 .header-enter {
   position: relative;
   padding: 25px 30px;
-  margin-right: 188px;
+  /* margin-left: auto; */
 }
 
 .header-exit {
   padding: 25px 12px;
-  margin-right: 53px;
   opacity: 0.3;
 }
 
@@ -204,7 +211,6 @@ html {
 .header-compare {
   position: relative;
   padding: 25px 20px;
-  margin-right: 24px;
 }
 
 .header-compare::before {
