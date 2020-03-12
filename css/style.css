@@ -97,7 +97,7 @@ html {
   position: relative;
   background-image: linear-gradient(#ffffff 12%, #f7e296 12%, #f7e296 100%);
   padding: 0px 60px 47px 60px;
-  margin-top: 11px;
+  margin-top: 15px;
 }
 
 .header-catalog {
@@ -107,7 +107,7 @@ html {
 .header-logo,
 .header-logo-index {
   position: absolute;
-  top: 10px;
+  top: 6px;
 }
 
 .header-logo[href]:hover,
@@ -137,7 +137,8 @@ html {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding-top: 72px;
+  padding-top: 68px;
+  margin-bottom: 36px;
 }
 
 .user-nav-header a {
@@ -240,7 +241,7 @@ html {
 
 /*-------------------------HEADER MAIN-NAV-------------------------*/
 
-.main-nav > li > a {
+.main-nav a {
   font-family: "Gilroy", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -267,7 +268,7 @@ html {
 }
 
 .main-nav-item {
-  font-family: "Gilroy", sans-serif;
+  font-family: "Gilroy", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: 900;
@@ -278,7 +279,7 @@ html {
 .nav-catalog {
   position: relative;
   padding: 25px 30px 30px 0px;
-  margin-right: 262px;
+  /* margin-right: 262px; */  
 }
 
 .nav-catalog::after {
@@ -302,10 +303,12 @@ html {
 
 .nav-contacts {
   padding: 25px 30px 25px 33px;
-
 }
 
 .nav-catalog-list {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
 }
@@ -319,11 +322,15 @@ html {
   color: #000000;
 }
 
+.nav-catalog:hover ~ .nav-catalog-list a {
+  display: flex;
+}
+
 .nav-catalog-current {
   opacity: 0.3;
 }
 
-.main-header::after {
+/* .main-header::after {
   position: absolute;
   content: "";
   border: solid 4px #ffffff;
@@ -331,13 +338,22 @@ html {
   right: 461px;
   top: 250px;
   z-index: 2;
-}
+} */
 
 /*-------------------------MAIN SLIDERS-------------------------*/
 
 .sliders {
   position: relative;
   background-image: linear-gradient(#f7e296 113px, #ffffff 113px);
+}
+
+.sliders::before {
+  position: absolute;
+  content: "";
+  border: solid 4px #ffffff;
+  width: 100px;
+  right: 460px;
+  top: 38px;
 }
 
 .sliders-list {
@@ -372,62 +388,71 @@ html {
 }
 
 .sliders-list-quadro {
-  margin-bottom: 110px;
+  margin-bottom: 113px;
 }
 
 .sliders-list-self img {
-  width: 384px;
-  margin: 2px 0px 0px 71px;
+  max-width: 384px;
+  margin: 2px 0px 0px 90px;
   padding: 0;
 }
 
 .sliders-list-fit img {
-  width: 345px;
-  margin: 14px 0px 0px 98px;
+  max-width: 345px;
+  margin: 14px 0px 0px 117px;
   padding: 0;
 }
 
 .sliders-list-quadro img {
-  width: 526px;
-  margin: 67px 0px 0px 12px;  
+  max-width: 526px;
+  margin: 67px 0px 0px 32px;  
 }
 
 .sliders-content {
-  max-width: 700px;
+  max-width: 560px;
   z-index: 10;
 }
 
+.sliders-list-self .sliders-content {
+  margin: 81px 0 0 125px;
+}
+
+.sliders-list-fit .sliders-content {
+  margin: 81px 0 0 138px;
+}
+
+.sliders-list-quadro .sliders-content {
+  margin: 81px 0 0 42px;
+}
+
+.sliders-content h2 {
+  margin-bottom: 19px;
+}
+
 .sliders-list-self h2 {
-  margin: 81px 0px 19px 125px;
   letter-spacing: 0.5px;
 }
 
 .sliders-list-fit h2 {
-  margin: 81px 0px 19px 138px;
   letter-spacing: 0.6px;
 }
 
 .sliders-list-quadro h2 {
   max-width: 505px;
-  margin: 81px 0px 19px 42px;
   letter-spacing: 0.7px;
 }
 
-
 .sliders-list-self p {
-  margin-left: 125px;
   letter-spacing: 0.17px;
 }
 
 .sliders-list-fit p {
   max-width: 460px;
-  margin-left: 138px;
   letter-spacing: 0.15px;
 }
 
 .sliders-list-quadro p {
   max-width: 460px;
-  margin-left: 42px;
   letter-spacing: 0.15px;
 }
 
@@ -437,7 +462,7 @@ html {
   width: 166px;
   height: 131px;
   background: url("../img/01.png") no-repeat;
-  right: 39px;
+  right: 60px;
   top: 11px;
 }
 
@@ -447,7 +472,7 @@ html {
   width: 198px;
   height: 131px;
   background: url("../img/02.png") no-repeat;
-  right: 33px;
+  right: 53px;
   top: 11px;
 }
 
@@ -457,7 +482,7 @@ html {
   width: 201px;
   height: 131px;
   background: url("../img/03.png") no-repeat;
-  right: 32px;
+  right: 52px;
   top: 11px;
 }
 
@@ -475,10 +500,10 @@ html {
 }
 
 .sliders-button {
-  position: absolute;
+  display: inline-block;
   width: 220px;
-  left: 581px;
-  top: 323px;
+  margin-top: 35px;
+  margin-bottom: 56px;
 }
 
 .button:hover {
@@ -489,23 +514,24 @@ html {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.self-properties {
+/* .self-properties {
   margin: 130px 0px 0px 122px;
-}
-
+} */
+/* 
 .fit-properties {
   margin: 130px 0px 0px 136px;
 }
 
 .quadro-properties {
   margin: 130px 0px 0px 39px;
-}
+} */
 
 .product-properties td {
   font-family: "Gilroy", "Arial", sans-serif;
   font-size: 36px;
   line-height: 48px;
   font-weight: 300;
+  padding: 0;
   padding-right: 76px;
 }
 
@@ -518,8 +544,8 @@ html {
   font-size: 13px;
   line-height: 20px;
   font-weight: 300;
+  padding: 0;
   padding-top: 5px;
-  padding-left: 3px;
 }
 
 .slide {
@@ -528,6 +554,7 @@ html {
 
 .slider-controls label {
   display: inline-block;
+  position: relative;
   width: 12px;
   height: 12px;
   margin-right: 21px;
@@ -536,6 +563,18 @@ html {
   border-radius: 50%;
   cursor: pointer;
 }
+
+/* .radio-slider:checked ~ sliders.label::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 5px;
+  height: 5px;
+  border: 1px solid #000000;
+  border-radius: 50%;
+  cursor: pointer;
+} */
 
 .slider-controls {
   position: absolute;
@@ -551,11 +590,25 @@ html {
   display: flex;
 }
 
-#product-1:checked ~ .sliders label[for="product-1"],
+/* #product-1:checked ~ .sliders label[for="product-1"],
 #product-2:checked ~ .sliders label[for="product-2"],
 #product-3:checked ~ .sliders label[for="product-3"] {
-  background-color: red;
-}
+  background-color: transparent;
+} */
+
+/* #product-1:checked ~ .sliders label[for="product-1"],
+#product-2:checked ~ .sliders label[for="product-2"],
+#product-3:checked ~ .sliders label[for="product-3"] {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 5px;
+  height: 5px;
+  border: 1px solid #000000;
+  border-radius: 50%;
+  cursor: pointer;
+} */
 
 /*-------------------------CATEGORY TOP-------------------------*/
 
@@ -678,7 +731,7 @@ letter-spacing: 0.5px;
 }
 
 .services-list h3 {
-  font-family: Gilroy;
+  font-family: "Gilroy", "Arial", sans-serif;
   font-size: 47px;
   font-weight: 800;
   line-height: 1.02;
@@ -751,7 +804,7 @@ letter-spacing: 0.5px;
   background-color: #f0c52e;
   cursor: pointer;
   margin-bottom: 24px;
-  font-family: Gilroy;
+  font-family: "Gilroy", "Arial", sans-serif;
   font-size: 18px;
   font-weight: 800;
   line-height: 1.33;
@@ -827,7 +880,7 @@ letter-spacing: 0.5px;
 }
 
 .info-us h2 {
-  font-family: Gilroy;
+  font-family: "Gilroy", "Arial", sans-serif;
   font-size: 47px;
   font-weight: 800;
   line-height: 1.02;
@@ -893,11 +946,11 @@ letter-spacing: 0.5px;
 }
 
 .delivery-list li {
-  font-family: Gilroy;
+  font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
   margin-bottom: 10px;
   padding-left: 17px;
-  letter-spacing: 0.8px;
+  letter-spacing: 0.8px;  
 }
 
 .contacts-address {
@@ -1224,7 +1277,7 @@ footer {
 }
 
 .catalog-subtitle {
-  font-family: Gilroy;
+  font-family: "Gilroy", "Arial", sans-serif;
   font-size: 47px;
   font-weight: 800;
   line-height: 48px;
