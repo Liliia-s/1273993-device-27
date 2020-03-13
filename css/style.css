@@ -98,6 +98,7 @@ html {
   background-image: linear-gradient(#ffffff 12%, #f7e296 12%, #f7e296 100%);
   padding: 0px 60px 47px 60px;
   margin-top: 15px;
+  /* margin-bottom: 37px; */
 }
 
 .header-logo,
@@ -1348,7 +1349,8 @@ footer {
 /*-------------------------monopod-wrapper----------------------------*/
 
 .monopod-wrapper {
-  margin: 0 0 43px 199px;
+  margin: 37px 0 43px 0px;
+  padding: 0 60px;
 }
 
 .catalog-subtitle {
@@ -1410,17 +1412,19 @@ footer {
 }
 
 /*-------------------------catalog-wrapper-------------------------*/
-.catalog-wrapper {
+
+.catalog-header,
+.catalog-content {
   display: flex;
-  margin: 0;
-  /* background-image: linear-gradient(#ebebeb 30%, #ffffff 30%, #ffffff 100%) ; */
 }
+
 
 /*-------------------------filters-wrapper-------------------------*/
 
 .filters {
   background-color: #eeeeee;
-  margin: 0 140px 0 199px;
+  margin: 0 140px 0 60px;
+  width: 268px;
 }
 
 .filters-wrapper {
@@ -1435,7 +1439,7 @@ footer {
   text-transform: uppercase;
   padding-top: 10px;
   letter-spacing: 3.5px;
-  margin-bottom: 93px;
+  /* margin-bottom: 93px; */
 }
 
 .filters legend,

@@ -91,10 +91,32 @@
         <li class="breadcrumbs-current breadcrumbs-arrow"><a class="breadcrumbs-monopod">Моноподы для селфи</a></li>
       </ul>
     </div>
+  </div>
     <div class="catalog-wrapper">
-      <section class="filters">
-        <div class="filters-wrapper">
+      <div class="catalog-main">
+        <div class="catalog-header">
+          <div class="container">
         <h2 class="filters-name">Фильтр:</h2>
+        <div class="sort">
+          <h2 class="visually-hidden">Сортировка товаров</h2>
+          <p>Сортировка:</p>
+          <ul class="sort-list">
+            <li><a class="sort-current">По цене</a></li>
+            <li><a class="sort-link" href="#">По типу</a></li>
+            <li><a class="sort-link" href="#">По популярности</a></li>
+          </ul>
+          <ul class="sort-increment">
+            <li><a class="sort-item sort-increase" href="#"><span class="visually-hidden">По возрастанию</span></a></li>
+            <li><a class="sort-decrease increment-current"><span class="visually-hidden">По убыванию</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="catalog-content">
+      <div class="container">
+      <section class="filters">
+        <h2 class="visually-hidden">Список фильтров</h2>
+        <div class="filters-wrapper">
         <form class="filters-choice" action="https://echo.htmlacademy.ru" method="get">
           <div class="filter-range">
           <div class="filter-range-title">Стоимость</div>
@@ -158,19 +180,6 @@
       </div>
       </section>
     <section class="catalog">
-      <div class="sort">
-        <h2 class="visually-hidden">Сортировка товаров</h2>
-        <p>Сортировка:</p>
-        <ul class="sort-list">
-          <li><a class="sort-current">По цене</a></li>
-          <li><a class="sort-link" href="#">По типу</a></li>
-          <li><a class="sort-link" href="#">По популярности</a></li>
-        </ul>
-        <ul class="sort-increment">
-          <li><a class="sort-item sort-increase" href="#"><span class="visually-hidden">По возрастанию</span></a></li>
-          <li><a class="sort-decrease increment-current"><span class="visually-hidden">По убыванию</span></a></li>
-        </ul>
-    </div>
       <div class="products-wrapper">
       <h2 class="visually-hidden">Листинг товаров</h2>
       <ul class="products-list">
@@ -236,6 +245,9 @@
       </ul>
       </div>
     </section>
+    </div>
+
+    </div>
   </div>
 </div>
   </main>
