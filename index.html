@@ -11,44 +11,53 @@
 <body>
   <header class="container">
     <div class="main-header">
-    <img class="header-logo-index" src="img/logo-device.svg" width="164" height="35"
-      alt="Логотип интернет-магазина Device">
+      <img class="header-logo-index" src="img/logo-device.svg" width="164" height="35"
+        alt="Логотип интернет-магазина Device">
       <div class="header-top">
-      <!-- <div class="header-search"><span class="main"><input>Поиск по сайту</span> -->
+        <!-- <div class="header-search"><span class="main"><input>Поиск по сайту</span> -->
         <div class="header-search">
-        <input class="input-field main-search" type="text" name="your-search" id="search-field" placeholder="Поиск по сайту">
+          <input class="input-field main-search" type="text" name="your-search" id="search-field"
+            placeholder="Поиск по сайту">
+        </div>
+        <ul class="user-nav-header">
+          <li class="user-item-header"><a class="header-enter" href="#">Войти</a></li>
+          <li class="user-item-header"><a class="header-compare" href="#">Сравнить</a></li>
+          <li class="user-item-header"><a class="header-basket" href="#">Корзина</a></li>
+        </ul>
       </div>
-    <ul class="user-nav-header">
-      <li class="user-item-header"><a class="header-enter" href="#">Войти</a></li>
-      <li class="user-item-header"><a class="header-compare" href="#">Сравнить</a></li>
-      <li class="user-item-header"><a class="header-basket" href="#">Корзина</a></li>
-    </ul>
-      </div>
-    <nav class="nav header-middle">
-        <div class="header-catalog"><a class="nav-catalog main-nav-item" href="#">Каталог товаров</a>
-          <ul class="nav-catalog-list">
-            <li><a href="#">Виртуальная реальность</a></li>
-            <li><a href="catalog.html">Моноподы для селфи</a></li>
-            <li><a href="#">Экшн-камеры</a></li>
-            <li><a href="#">Фитнес-браслеты</a></li>
-            <li><a href="#">Умные часы</a></li>
-            <li><a href="#">Квадрокоптеры</a></li>
-          </ul>
-        </li>
-      </div>
+      <nav class="nav header-middle">
+        <div class="header-catalog">
+          <div class="nav-catalog-wrapper">
+          <a class="nav-catalog main-nav-item" href="#">Каталог товаров</a>
+        </div>
+          <div class="nav-catalog-list">
+            <ul class="nav-catalog-item column-1">
+              <li><a href="#">Виртуальная реальность</a></li>
+              <li><a href="catalog.html">Моноподы для селфи</a></li>
+              <li><a href="#">Экшн-камеры</a></li>
+            </ul>
+            <ul class="nav-catalog-item column-2">
+              <li><a href="#">Фитнес-браслеты</a></li>
+              <li><a href="#">Умные часы</a></li>
+            </ul>
+            <ul class="nav-catalog-item column-3">
+              <li><a href="#">Квадрокоптеры</a></li>
+            </ul>
+          </div>
+        </div>
         <ul class="main-nav">
-        <li><a class="nav-delivery main-nav-item" href="delivery.html">Доставка</a></li>
-        <li><a class="nav-guarantee main-nav-item" href="guarantee.html">Гарантия</a></li>
-        <li><a class="nav-contacts main-nav-item" href="contacts.html">Контакты</a></li>
-      </ul>
-    </nav>
-  </div>
+          <li><a class="nav-delivery main-nav-item" href="delivery.html">Доставка</a></li>
+          <li><a class="nav-guarantee main-nav-item" href="guarantee.html">Гарантия</a></li>
+          <li><a class="nav-contacts main-nav-item" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
   <main>
     <div class="container">
-    <input class="radio-slider visually-hidden" type="radio" id="product-1" name="toggle-sliders" checked>
-    <input class="radio-slider visually-hidden" type="radio" id="product-2" name="toggle-sliders">
-    <input class="radio-slider visually-hidden" type="radio" id="product-3" name="toggle-sliders">
+      <input class="radio-slider visually-hidden" type="radio" id="product-1" name="toggle-sliders" checked>
+      <input class="radio-slider visually-hidden" type="radio" id="product-2" name="toggle-sliders">
+      <input class="radio-slider visually-hidden" type="radio" id="product-3" name="toggle-sliders">
       <section class="sliders">
         <h1 class="visually-hidden">Интернет-магазин электроники Device</h1>
         <div class="slider-controls">
@@ -173,17 +182,17 @@
       </section>
     </div>
     <section class="partners container">
-        <h2 class="visually-hidden">Партнеры интернет-магазина Device</h2>
-        <ul class="partners-list">
-          <li class="partners-item logo-dji"><a href="#"><img src="img/logo-1-gray.png" width="260" height="100"
-                alt="Логотип Dji"></a></li>
-          <li class="partners-item logo-gadjets"><a href="#"><img src="img/logo-2-gray.png" width="260" height="100"
-                alt="Логотип Gadgets"></a></li>
-          <li class="partners-item logo-gopro"><a href="#"><img src="img/logo-3-gray.png" width="260" height="100"
-                alt="Логотип GoPro"></a></li>
-          <li class="partners-item logo-vive"><a href="#"><img src="img/logo-4-gray.png" width="260" height="100"
-                alt="Логотип Vive"></a></li>
-        </ul>
+      <h2 class="visually-hidden">Партнеры интернет-магазина Device</h2>
+      <ul class="partners-list">
+        <li class="partners-item logo-dji"><a href="#"><img src="img/logo-1-gray.png" width="260" height="100"
+              alt="Логотип Dji"></a></li>
+        <li class="partners-item logo-gadjets"><a href="#"><img src="img/logo-2-gray.png" width="260" height="100"
+              alt="Логотип Gadgets"></a></li>
+        <li class="partners-item logo-gopro"><a href="#"><img src="img/logo-3-gray.png" width="260" height="100"
+              alt="Логотип GoPro"></a></li>
+        <li class="partners-item logo-vive"><a href="#"><img src="img/logo-4-gray.png" width="260" height="100"
+              alt="Логотип Vive"></a></li>
+      </ul>
     </section>
     <div class="info-us container">
       <section class="about-us">
@@ -212,37 +221,37 @@
   </main>
   <footer>
     <div class="container">
-    <div class="footer-top">
-      <p class="footer-logo">
-        <a href="#">
-          <img src="img/logo2.svg" width="164" height="35" alt="Логотип интернет-магазина Device">
-        </a>
-      </p>
-      <ul class="user-nav-footer">
-        <li class="user-item-footer"><a class="footer-enter" href="#">Войти</a></li>
-        <li class="user-item-footer"><a class="footer-compare" href="#">Сравнить</a></li>
-        <li class="user-item-footer"><a class="footer-basket" href="#">Корзина</a></li>
-      </ul>
+      <div class="footer-top">
+        <p class="footer-logo">
+          <a href="#">
+            <img src="img/logo2.svg" width="164" height="35" alt="Логотип интернет-магазина Device">
+          </a>
+        </p>
+        <ul class="user-nav-footer">
+          <li class="user-item-footer"><a class="footer-enter" href="#">Войти</a></li>
+          <li class="user-item-footer"><a class="footer-compare" href="#">Сравнить</a></li>
+          <li class="user-item-footer"><a class="footer-basket" href="#">Корзина</a></li>
+        </ul>
+      </div>
+      <div class="footer-middle">
+        <p class="address">г. Москва, ул. Строителей, 15</p>
+        <ul class="footer-nav">
+          <li><a href="delivery.html">Доставка</a></li>
+          <li><a href="guarantee.html">Гарантия</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+        <p class="number-phone"><a href="tel:+74954969595">Тел.: +7 (495) 495-95-95</a></p>
+      </div>
+      <div class="footer-bottom">
+        <ul class="social-list">
+          <li><a class="social-facebook" href="#"><span class="visually-hidden">Facebook Device</span></a></li>
+          <li><a class="social-instagram" href="#"><span class="visually-hidden">Instagram Device</span></a></li>
+          <li><a class="social-twitter" href="#"><span class="visually-hidden">Twitter Device</span></a></li>
+        </ul>
+        <a href="https://htmlacademy.ru/intensive/htmlcss"><img class="logo-academy" src="img/logo-html.svg" width="27"
+            height="34" alt="Логотип HTML Academy"></a>
+      </div>
     </div>
-    <div class="footer-middle">
-      <p class="address">г. Москва, ул. Строителей, 15</p>
-      <ul class="footer-nav">
-        <li><a href="delivery.html">Доставка</a></li>
-        <li><a href="guarantee.html">Гарантия</a></li>
-        <li><a href="contacts.html">Контакты</a></li>
-      </ul>
-      <p class="number-phone"><a href="tel:+74954969595">Тел.: +7 (495) 495-95-95</a></p>
-    </div>
-    <div class="footer-bottom">
-      <ul class="social-list">
-        <li><a class="social-facebook" href="#"><span class="visually-hidden">Facebook Device</span></a></li>
-        <li><a class="social-instagram" href="#"><span class="visually-hidden">Instagram Device</span></a></li>
-        <li><a class="social-twitter" href="#"><span class="visually-hidden">Twitter Device</span></a></li>
-      </ul>
-      <a href="https://htmlacademy.ru/intensive/htmlcss"><img class="logo-academy" src="img/logo-html.svg" width="27"
-          height="34" alt="Логотип HTML Academy"></a>
-    </div>
-  </div>
   </footer>
   <section class="modal modal-feedback">
     <h2 class="visually-hidden">Напишите нам</h2>

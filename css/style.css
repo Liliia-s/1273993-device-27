@@ -123,7 +123,7 @@ html {
 
 .user-nav-header,
 .main-nav,
-.nav-catalog-list {
+.nav-catalog-list ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -169,8 +169,15 @@ html {
   top: 8px;
 }
 
-.main-search:hover {
+.main-search {
   opacity: 0.6;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+}
+
+.main-search:hover {
+  opacity: 1;
 }
 
 .header-search:focus {
@@ -249,7 +256,6 @@ html {
   flex-wrap: wrap;
 }
 
-
 .nav a {
   font-family: "Gilroy", "Arial", sans-serif;
   font-size: 18px;
@@ -258,11 +264,13 @@ html {
   color:#000000;
 }
 
-.main-nav a:not(.nav-catalog-current):hover {
+.main-nav a:not(.nav-catalog-current):hover,
+.header-catalog a:hover {
   opacity: 0.6;
 }
 
-.main-nav a:not(.nav-catalog-current):active {
+.main-nav a:not(.nav-catalog-current):active,
+.header-catalog a:active {
   opacity: 0.3;
 }
 
@@ -311,15 +319,42 @@ html {
   padding: 25px 30px 25px 33px;
 }
 
+.nav {
+  position: relative;
+}
+
 .nav-catalog-list {
   display: none;
   position: absolute;
-  margin: 0;
+  margin: 0;  
   padding: 0;
   top: 48px;
   left: 0px;
   z-index: 10;
+  width: 1040px;
   background-color: #f7e296;
+  padding-bottom: 34px;
+}
+
+.nav-catalog-wrapper:hover ~ .nav-catalog-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1040px;
+}
+
+.nav-catalog-list .column-1 {
+  width: 220px;
+  margin-right: 20px;
+}
+
+.nav-catalog-list .column-2 {
+  width: 180px;
+  margin-right: 20px;
+}
+
+.nav-catalog-list .column-3 {
+  width: 180px;
+  margin-right: auto;
 }
 
 .nav-catalog-list a {
@@ -328,14 +363,10 @@ html {
   line-height: 36px;
   font-weight: 300;
   color: #000000;
+  letter-spacing: 0.15px;
 }
 
-.header-nav-catalog:hover ~ .nav-catalog-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-right: 20px;
-}
+
 
 .nav-catalog-current {
   opacity: 0.3;
@@ -346,6 +377,7 @@ html {
 .sliders {
   position: relative;
   background-image: linear-gradient(#f7e296 113px, #ffffff 113px);
+  margin-bottom: 74px;
 }
 
 .sliders::before {
@@ -381,49 +413,54 @@ html {
 }
 
 .sliders-list-self {
-  margin-bottom: 97px;
+  /* margin-bottom: 97px; */
 }
 
 .sliders-list-fit {
-  margin-bottom: 86px;
+  /* margin-bottom: 86px; */
 }
 
 .sliders-list-quadro {
-  margin-bottom: 113px;
+  /* margin-bottom: 113px; */
+}
+
+.sliders-photo {
+  width: 560px;
+  text-align: center;
 }
 
 .sliders-list-self img {
-  max-width: 384px;
-  margin: 2px 0px 0px 90px;
+  max-width: 100%;
+  margin: 2px 0px 0px 0px;
   padding: 0;
 }
 
 .sliders-list-fit img {
-  max-width: 345px;
-  margin: 14px 0px 0px 117px;
+  max-width: 100%;
+  margin: 14px 0px 0px 16px;
   padding: 0;
 }
 
 .sliders-list-quadro img {
-  max-width: 526px;
-  margin: 67px 0px 0px 32px;  
+  max-width: 100%;
+  margin: 67px 0px 0px 28px;
 }
 
 .sliders-content {
-  max-width: 560px;
+  width: 560px;
   z-index: 10;
 }
 
 .sliders-list-self .sliders-content {
-  margin: 81px 0 0 125px;
+  margin: 81px 0 0 0px;
 }
 
 .sliders-list-fit .sliders-content {
-  margin: 81px 0 0 138px;
+  margin: 81px 0 0 0px;
 }
 
 .sliders-list-quadro .sliders-content {
-  margin: 81px 0 0 42px;
+  margin: 81px 0 0 0px;
 }
 
 .sliders-content h2 {
@@ -524,17 +561,9 @@ html {
   color: rgba(0, 0, 0, 0.3);
 }
 
-/* .self-properties {
-  margin: 130px 0px 0px 122px;
-} */
-/* 
-.fit-properties {
-  margin: 130px 0px 0px 136px;
+.product-properties {
+  margin-bottom: 40px;
 }
-
-.quadro-properties {
-  margin: 130px 0px 0px 39px;
-} */
 
 .product-properties td {
   font-family: "Gilroy", "Arial", sans-serif;
@@ -598,7 +627,10 @@ html {
 #product-2:checked ~ .sliders #slide-2,
 #product-3:checked ~ .sliders #slide-3 {
   display: flex;
+  justify-content: space-between;
 }
+
+li#slide-1 {}
 
 /* #product-1:checked ~ .sliders label[for="product-1"],
 #product-2:checked ~ .sliders label[for="product-2"],
@@ -1244,7 +1276,7 @@ footer {
   background: url("../img/modal-close.svg") no-repeat;
 }
 
-/* Проверить этот кусок кода на интерактивной карте
+/* ÐŸÑ€Ð¾Ð²ÐµÑ€Ð¸Ñ‚ÑŒ ÑÑ‚Ð¾Ñ‚ ÐºÑƒÑÐ¾Ðº ÐºÐ¾Ð´Ð° Ð½Ð° Ð¸Ð½Ñ‚ÐµÑ€Ð°ÐºÑ‚Ð¸Ð²Ð½Ð¾Ð¹ ÐºÐ°Ñ€Ñ‚Ðµ
 
 
 .map-close {
