@@ -100,10 +100,6 @@ html {
   margin-top: 15px;
 }
 
-.header-catalog {
-  margin: 0 0 37px;
-}
-
 .header-logo,
 .header-logo-index {
   position: absolute;
@@ -136,7 +132,6 @@ html {
 .header-top {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   padding-top: 68px;
   margin-bottom: 36px;
 }
@@ -145,7 +140,6 @@ html {
   display: flex;
   flex-wrap: wrap;
 }
-
 
 .user-nav-header a {
   color: #000000;
@@ -173,6 +167,14 @@ html {
   height: 16px;
   left: 3px;
   top: 8px;
+}
+
+.main-search:hover {
+  opacity: 0.6;
+}
+
+.header-search:focus {
+  border-bottom: 2px solid #000000;
 }
 
 .header-enter {
@@ -240,9 +242,15 @@ html {
   left: -2px;
 }
 
-/*-------------------------HEADER MAIN-NAV-------------------------*/
+/*-------------------------NAV-------------------------*/
 
-.main-nav a {
+.header-middle {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.nav a {
   font-family: "Gilroy", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -258,15 +266,13 @@ html {
   opacity: 0.3;
 }
 
-/*-------------------------HEADER NAV-------------------------*/
-
 .main-nav {
   position: relative;
   display: flex;
   flex-wrap: wrap;
   padding: 0;
   margin: 0;
-  margin-top: 36px;
+  margin-left: auto;
 }
 
 .main-nav-item {
@@ -281,7 +287,6 @@ html {
 .nav-catalog {
   position: relative;
   padding: 25px 30px 30px 0px;
-  /* margin-right: 262px; */  
 }
 
 .nav-catalog::after {
@@ -300,7 +305,6 @@ html {
 
 .nav-guarantee {
   padding: 25px 30px 30px 24px;
-  margin-right: 46px;
 }
 
 .nav-contacts {
@@ -336,16 +340,6 @@ html {
 .nav-catalog-current {
   opacity: 0.3;
 }
-
-/* .main-header::after {
-  position: absolute;
-  content: "";
-  border: solid 4px #ffffff;
-  width: 100px;
-  right: 461px;
-  top: 250px;
-  z-index: 2;
-} */
 
 /*-------------------------MAIN SLIDERS-------------------------*/
 

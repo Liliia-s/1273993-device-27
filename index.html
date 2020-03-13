@@ -14,16 +14,18 @@
     <img class="header-logo-index" src="img/logo-device.svg" width="164" height="35"
       alt="Логотип интернет-магазина Device">
       <div class="header-top">
-      <div class="header-search">Поиск по сайту</div>
+      <!-- <div class="header-search"><span class="main"><input>Поиск по сайту</span> -->
+        <div class="header-search">
+        <input class="input-field main-search" type="text" name="your-search" id="search-field" placeholder="Поиск по сайту">
+      </div>
     <ul class="user-nav-header">
       <li class="user-item-header"><a class="header-enter" href="#">Войти</a></li>
       <li class="user-item-header"><a class="header-compare" href="#">Сравнить</a></li>
       <li class="user-item-header"><a class="header-basket" href="#">Корзина</a></li>
     </ul>
       </div>
-    <nav class="nav">
-      <ul class="main-nav">
-        <li class="header-nav-catalog"><a class="nav-catalog main-nav-item" href="#">Каталог товаров</a></li>
+    <nav class="nav header-middle">
+        <div class="header-catalog"><a class="nav-catalog main-nav-item" href="#">Каталог товаров</a>
           <ul class="nav-catalog-list">
             <li><a href="#">Виртуальная реальность</a></li>
             <li><a href="catalog.html">Моноподы для селфи</a></li>
@@ -33,6 +35,8 @@
             <li><a href="#">Квадрокоптеры</a></li>
           </ul>
         </li>
+      </div>
+        <ul class="main-nav">
         <li><a class="nav-delivery main-nav-item" href="delivery.html">Доставка</a></li>
         <li><a class="nav-guarantee main-nav-item" href="guarantee.html">Гарантия</a></li>
         <li><a class="nav-contacts main-nav-item" href="contacts.html">Контакты</a></li>
