@@ -168,7 +168,7 @@ html {
 
 .header-user {
   position: relative;
-  padding: 25px 10px 25px 29px;
+  padding: 25px 10px 25px 47px;
 }
 
 .header-user::before {
@@ -178,7 +178,7 @@ html {
   width: 13px;
   height: 12px;
   top: 29px;
-  left: 4px;
+  left: 21px;
 }
 
 .header-enter::before {
@@ -1096,15 +1096,27 @@ letter-spacing: 0.5px;
   margin-bottom: 65px;
   padding: 0;
   padding-left: 18px;
-  list-style: circle;
+  list-style: none;
 }
 
 .delivery-list li {
+  position: relative;
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
   margin-bottom: 10px;
   padding-left: 17px;
   letter-spacing: 0.8px;  
+}
+
+.delivery-list li::before {
+  position: absolute;
+  content: "";
+  top: 10px;
+  left: -17px;
+  width: 8px;
+  height: 8px;
+  border: 2px solid #e6e6e6;
+  border-radius: 50%;
 }
 
 .contacts-address {
@@ -1179,9 +1191,6 @@ footer {
 
 .user-item-footer {
   margin-left: 30px;
-}
-.footer-enter {
-  /* margin-left: 152px; */
 }
 
 .footer-enter,
@@ -1593,6 +1602,17 @@ section.catalog {
   top: 0;
 }
 
+.checkbox-form:disabled + label {
+  color: rgba(166, 166, 166, 0.25);
+  cursor: default;
+}
+
+.checkbox-form:disabled + label::before {
+  cursor: default;
+  opacity: 0.25;
+}
+
+
 .checkbox-form:checked + label::before {
   background: url("../img/checkbox-on.svg") no-repeat;
   content: "";
@@ -1601,8 +1621,13 @@ section.catalog {
   padding: 20px;
 }
 
-label:hover::before {
+.checkbox-form:not(:disabled) + label:hover::before,
+.checkbox-form:not(:disabled) + label:focus::before {
   opacity: 0.6;
+}
+
+.checkbox-form:not(:disabled) + label:active::before {
+  opacity: 1;
 }
 
 li.filters-option {
@@ -1626,24 +1651,47 @@ li.filters-option {
 
 .radio-form + label::before {
   position: absolute;
-  background: url("../img/radio-off.svg") no-repeat;
+  border: 5px solid #000000;
+  border-radius: 50%;
   content: "";
-  width: 25px;
-  height: 25px;
-  padding: 20px;
-  top: 0;
-  left: 0;
+  width: 27px;
+  height: 27px;
+  top: -2px;
+  left: -2px;
 }
 
 .radio-form:checked + label::after {
   content: "";
   position: absolute;
-  top: 8px;
-  left: 8px;
+  top: 7px;
+  left: 7px;
   width: 9px;
   height: 9px;
   background-color: #000000;
   border-radius: 50%;
+}
+
+.radio-form:disabled + label {
+  color: rgba(166, 166, 166, 0.25);
+  cursor: default;
+}
+
+.radio-form:disabled + label::before,
+.radio-form:disabled + label::after {
+  opacity: 0.25;
+  cursor: default;
+}
+ 
+.radio-form:not(:disabled) + label:hover::before,
+.radio-form:not(:disabled) + label:focus::before,
+.radio-form:not(:disabled) + label:hover::after,
+.radio-form:not(:disabled) + label:focus::after {
+  opacity: 0.6;
+}
+
+.radio-form:not(:disabled) + label:active::before,
+.radio-form:not(:disabled) + label:active::after {
+  opacity: 1;
 }
 
 /*-------------------------catalog-------------------------*/
@@ -1765,7 +1813,7 @@ li.filters-option {
   background: url("../img/icon-down-dir.svg") no-repeat;
   width: 11px;
   height: 10px;
-  padding: 15px 0 15px 10px;
+  padding: 15px 1px 15px 10px;
 }
 
 .increment-current {
@@ -1911,18 +1959,12 @@ li.products-item {
   position: fixed;
   top: 50%;
   left: 50%;
-  z-index: 20;
+  z-index: 50;
   display: none;
   width: 960px;
   background-color: #ffffff;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   transform: translate(-50%, -50%);
-}
-
-.modal-show {
-  display: block;
-  animation: show 0.6s;
-  animation-fill-mode: forwards;
 }
 
 .modal-feedback-wrapper {
@@ -2045,6 +2087,7 @@ li.products-item {
 .modal-feedback-close,
 .modal-map-close {
   position: absolute;
+  z-index: 5;
   top: 22px;
   right: 22px;
   width: 55px;
@@ -2091,14 +2134,48 @@ li.products-item {
   opacity: 0.3;
 }
 
-@keyframes show {
-  0% {
-    transform: translate(-50%, -50%);
-  }
+/*-------------------------modal-map-------------------------*/
 
-  100% {
-    transform: translate(-50%, -50%);
-  }
+.modal-map {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 15;
+  width: 960px;
+  height: 560px;
+  background-color: #ffffff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: translate(-50%, -50%);
+}
+
+.modal-map p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  margin: 0;
+}
+
+.modal-map iframe {
+  position: relative;
+  z-index: 2;
+
+  border: none;
+}
+
+.modal-map-wrapper {
+  position: relative;
+}
+
+.modal-map-wrapper iframe {
+  width: 960px;
+  height: 560px;
+  border: none;
+}
+
+.modal-show {
+  display: block;
 }
 
 @keyframes shake {
@@ -2112,28 +2189,26 @@ li.products-item {
   50%,
   70%,
   90% {
-    transform: translateX(-20px);
+    transform: translate(-50%, -50%)  translateX(-20px);
   }
 
   20%,
   40%,
   60%,
   80% {
-    transform: translateX(20px);
+    transform: translate(-50%, -50%)  translateX(20px);
   }
 }
 
-
-
 .overlay {
+  display: none;
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 150;
-  display: none;
-  background-color: rgba(0, 0, 0, 0.25);
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .overlay-show {
@@ -2141,39 +2216,6 @@ li.products-item {
 }
 
 .modal-error {
-  animation: shake 0.6s;
-  animation-fill-mode: forwards;
+  animation: shake 0.7s;
 }
 
-
-/*-------------------------modal-map-------------------------*/
-
-.modal-map {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  z-index: 10;
-  display: none;
-  width: 960px;
-  height: 560px;
-  background-color: #ffffff;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  transform: translate(-50%, -50%);
-  animation-name: bounce;
-  animation-duration: 0.6s;
-}
-
-/* .modal-map-active {
-  display: block;
-} */
-
-.modal-map-wrapper {
-  position: relative;
-}
-
-.modal-map-wrapper iframe {
-  width: 960px;
-  height: 560px;
-  border: none;
-}
