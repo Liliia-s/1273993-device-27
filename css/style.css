@@ -1908,27 +1908,21 @@ li.products-item {
 /*-------------------------modal-feedback-------------------------*/
 
 .modal-feedback {
-  display: none;
   position: fixed;
   top: 50%;
   left: 50%;
-  z-index: 10;
+  z-index: 20;
   display: none;
   width: 960px;
   background-color: #ffffff;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   transform: translate(-50%, -50%);
-  animation-name: bounce;
-  animation-duration: 0.6s;
 }
 
-/* .modal-feedback-active {
+.modal-show {
   display: block;
-} */
-
-.modal-feedback--error {
- animation-name: shake;
-  animation-duration: 0.6s;
+  animation: show 0.6s;
+  animation-fill-mode: forwards;
 }
 
 .modal-feedback-wrapper {
@@ -2096,6 +2090,61 @@ li.products-item {
 .modal-map-close:active {
   opacity: 0.3;
 }
+
+@keyframes show {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translate(-50%, -50%);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-20px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(20px);
+  }
+}
+
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 150;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.overlay-show {
+  display: block;
+}
+
+.modal-error {
+  animation: shake 0.6s;
+  animation-fill-mode: forwards;
+}
+
 
 /*-------------------------modal-map-------------------------*/
 
