@@ -14,10 +14,14 @@
       <img class="header-logo-index" src="img/logo-device.svg" width="164" height="35"
         alt="Логотип интернет-магазина Device">
       <div class="header-top">
-        <!-- <div class="header-search"><span class="main"><input>Поиск по сайту</span> -->
-        <div class="header-search">
-          <input class="input-field main-search" type="text" name="your-search" id="search-field"
-            placeholder="Поиск по сайту">
+        <div class="nav-search nav-search-search">
+          <form class="main-nav-search" method="get" action="https://echo.htmlacademy.ru">
+            <input class="search-input" id="search" type="search" name="search" placeholder="Поиск по сайту">
+            <button class="button-search" type="submit">Найти</button>
+            <label class="search-label" for="search">
+              <span class="visually-hidden">Поиск:</span>
+            </label>
+          </form>
         </div>
         <ul class="user-nav-header">
           <li class="user-item-header"><a class="header-enter" href="#">Войти</a></li>
@@ -26,7 +30,7 @@
         </ul>
       </div>
       <nav class="nav header-middle">
-          <div class="nav-catalog-wrapper">
+        <div class="nav-catalog-wrapper">
           <a class="nav-catalog main-nav-item" href="#">Каталог товаров</a>
           <div class="nav-catalog-list">
             <ul class="nav-catalog-item column-1">
@@ -246,48 +250,78 @@
           <li><a class="social-instagram" href="#"><span class="visually-hidden">Instagram Device</span></a></li>
           <li><a class="social-twitter" href="#"><span class="visually-hidden">Twitter Device</span></a></li>
         </ul>
-        <a class="logo-academy-footer" href="https://htmlacademy.ru/intensive/htmlcss"><img class="logo-academy" src="img/logo-html.svg" width="27"
-            height="34" alt="Логотип HTML Academy"></a>
+        <a class="logo-academy-footer" href="https://htmlacademy.ru/intensive/htmlcss"><img class="logo-academy"
+            src="img/logo-html.svg" width="27" height="34" alt="Логотип HTML Academy"></a>
       </div>
     </div>
   </footer>
-  <div class="finish">
-  <section class="modal modal-feedback">
-    <h2 class="visually-hidden">Напишите нам</h2>
-    <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+    <section class="modal-feedback modal-feedback-active">
+      <h2 class="visually-hidden">Напишите нам</h2>
+      <div class="modal-feedback-wrapper">
+        <form class="popup-form" method="post" action="https://echo.htmlacademy.ru">
+          <div class="input-wrapper input-name">
+            <label for="user-name">Ваше имя:</label>
+            <input type="text" id="user-name" name="user-name" placeholder="Имя Фамилия">
+          </div>
+          <div class="input-wrapper input-email">
+            <label for="user-email">Ваш e-mail:</label>
+            <input type="email" id="user-email" name="user-email" placeholder="email@example.com">
+          </div>
+          <div class="input-wrapper input-message">
+            <label for="user-message">Текст письма:</label>
+            <textarea id="user-message" name="user-message" placeholder="В свободной форме"></textarea>
+          </div>
+          <button class="button" type="submit">Отправить</button>
+        </form>
+      <button class="modal-feedback-close" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+      </div>
+    </section>
+    <section class="modal-map modal-map-active">
+      <div class="modal-map-wrapper">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.112436988893!2d37.52821835204128!3d55.687032925863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1522064816436" width="960" height="560" style="border:0" allowfullscreen=""></iframe>
+        <button class="modal-map-close" type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+      </div>
+    </section>
+    <!-- <section class="modal modal-feedback">
+      <h2 class="visually-hidden">Напишите нам</h2>
+      <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <label for="name-field">Ваше имя:</label>
+          <input class="input-field" type="text" name="your-name" id="name-field" placeholder="Имя Фамилия">
+        </p>
+        <p>
+          <label for="email-field">Ваш e-mail:</label>
+          <input class="input-field" type="email" name="your-email" id="email-field" placeholder="email@example.com">
+        </p>
+        <p>
+          <label for="comment-field">Текст письма:</label>
+          <textarea class="comment-form" name="your-comment" id="comment-field"
+            placeholder="В свободной форме"></textarea>
+        </p>
+        <button class="button button-send" type="submit">Отправить</button>
+      </form>
+      <button class="button-close modal-close" type="button">
+        <span class="visually-hidden">Закрыть форму</span>
+      </button>
+    </section>
+    <section class="modal modal-map">
+      <h2 class="visually-hidden">Как до нас добраться</h2>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.112374947321!2d37.527429315426!3d55.68703400453062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1580678643995!5m2!1sru!2sru"
+        width="600" height="450" allowfullscreen></iframe>
       <p>
-        <label for="name-field">Ваше имя:</label>
-        <input class="input-field" type="text" name="your-name" id="name-field" placeholder="Имя Фамилия">
+        <img src="img/map-big.png" width="960" height="559"
+          alt="Схема проезда к интернет-магазину Device по адресу Улица Строителей, 15">
       </p>
-      <p>
-        <label for="email-field">Ваш e-mail:</label>
-        <input class="input-field" type="email" name="your-email" id="email-field" placeholder="email@example.com">
-      </p>
-      <p>
-        <label for="comment-field">Текст письма:</label>
-        <textarea class="comment-form" name="your-comment" id="comment-field"
-          placeholder="В свободной форме"></textarea>
-      </p>
-      <button class="button button-send" type="submit">Отправить</button>
-    </form>
-    <button class="button-close modal-close" type="button">
-      <span class="visually-hidden">Закрыть форму</span>
-    </button>
-  </section>
-  <section class="modal modal-map">
-    <h2 class="visually-hidden">Как до нас добраться</h2>
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.112374947321!2d37.527429315426!3d55.68703400453062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1580678643995!5m2!1sru!2sru"
-      width="600" height="450" allowfullscreen></iframe>
-    <p>
-      <img src="img/map-big.png" width="960" height="559"
-        alt="Схема проезда к интернет-магазину Device по адресу Улица Строителей, 15">
-    </p>
-    <button class="button-close map-close" type="button">
-      <span class="visually-hidden">Закрыть карту</span>
-    </button>
-  </section>
-</div>
+      <button class="button-close map-close" type="button">
+        <span class="visually-hidden">Закрыть карту</span>
+      </button>
+    </section> -->
+  </div>
 </body>
 
 </html>

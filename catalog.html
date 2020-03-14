@@ -9,48 +9,24 @@
 </head>
 
 <body>
-  <!-- <header class="main-header header-catalog container">
-    <a href="index.html">
-      <img class="header-logo" src="img/logo-device.svg" width="164" height="35" alt="Логотип интернет-магазина Device">
-    </a>
-    <ul class="user-nav-header">
-      <li class="user-item-header header-search">Поиск по сайту</li>
-      <li class="user-item-header"><a class="header-user" href="#">Валентин Петухов</a></li>
-      <li class="user-item-header"><a class="header-exit" href="#">Выйти</a></li>
-      <li class="user-item-header"><a class="header-compare" href="#">Сравнить</a></li>
-      <li class="user-item-header"><a class="header-basket" href="#">Корзина</a></li>
-    </ul>
-    <nav class="nav">
-      <ul class="main-nav">
-        <li><a class="nav-catalog main-nav-item" href="#">Каталог товаров</a>
-          <ul class="nav-catalog-list">
-            <li><a href="#">Виртуальная реальность</a></li>
-            <li><a href="catalog.html">Моноподы для селфи</a></li>
-            <li><a href="#">Экшн-камеры</a></li>
-            <li><a href="#">Фитнес-браслеты</a></li>
-            <li><a href="#">Умные часы</a></li>
-            <li><a href="#">Квадрокоптеры</a></li>
-          </ul>
-        </li>
-        <li><a class="nav-delivery main-nav-item" href="delivery.html">Доставка</a></li>
-        <li><a class="nav-guarantee main-nav-item" href="guarantee.html">Гарантия</a></li>
-        <li><a class="nav-contacts main-nav-item" href="contacts.html">Контакты</a></li>
-      </ul>
-    </nav>
-  </header> -->
   <header class="container">
     <div class="main-header">
       <a href="index.html">
-      <img class="header-logo-index" src="img/logo-device.svg" width="164" height="35"
-        alt="Логотип интернет-магазина Device">
+        <img class="header-logo-index" src="img/logo-device.svg" width="164" height="35"
+          alt="Логотип интернет-магазина Device">
       </a>
       <div class="header-top">
-        <!-- <div class="header-search"><span class="main"><input>Поиск по сайту</span> -->
-        <div class="header-search">
-          <input class="input-field main-search" type="text" name="your-search" id="search-field"
-            placeholder="Поиск по сайту">
-          <button type="submit" class="button search-button">Найти</button>
+
+        <div class="nav-search nav-search-search">
+          <form class="main-nav-search" method="get" action="https://echo.htmlacademy.ru">
+            <input class="search-input" id="search" type="search" name="search" placeholder="Поиск по сайту">
+            <button class="button-search" type="submit">Найти</button>
+            <label class="search-label" for="search">
+              <span class="visually-hidden">Поиск:</span>
+            </label>
+          </form>
         </div>
+
         <ul class="user-nav-header">
           <li class="user-item-header"><a class="header-enter" href="#">Войти</a></li>
           <li class="user-item-header user-compare"><a class="header-compare" href="#">Сравнить</a></li>
@@ -101,8 +77,8 @@
         <div class="catalog-header">
           <div class="container">
             <div class="filters-name">
-            <h2>Фильтр:</h2>
-          </div>
+              <h2>Фильтр:</h2>
+            </div>
             <div class="sort">
               <h2 class="visually-hidden">Сортировка товаров</h2>
               <p>Сортировка:</p>
@@ -135,8 +111,8 @@
                       <div class="range-toggle range-toggle-max"></div>
                     </div>
                     <div class="price-controls">
-                      <label class="min-price">от <input type="number" name="min-price" value="0"></label>
-                      <label class="max-price">до <input type="number" name="max-price" value="5000"></label>
+                      <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+                      <label class="max-price">до <input type="text" name="max-price" value="5000"></label>
                     </div>
                   </div>
                   <div class="filter-checkbox">
@@ -262,42 +238,6 @@
       </div>
     </div>
   </main>
-  <!-- <footer>
-    <div class="footer-wrapper">
-      <div class="footer-top">
-        <p class="footer-logo">
-          <a href="#">
-            <img src="img/logo2.svg" width="164" height="35" alt="Логотип интернет-магазина Device">
-          </a>
-        </p>
-        <ul class="user-nav-footer">
-          <li class="user-item-footer"><a class="footer-user" href="#">Валентин Петухов</a></li>
-          <li class="user-item-footer"><a class="footer-exit" href="#">Выйти</a></li>
-          <li class="user-item-footer"><a class="footer-compare" href="#">Сравнить</a></li>
-          <li class="user-item-footer"><a class="footer-basket" href="#">Корзина</a></li>
-        </ul>
-      </div>
-      <div class="footer-middle">
-        <p class="address">г. Москва, ул. Строителей, 15</p>
-        <ul class="footer-nav">
-          <li><a href="delivery.html">Доставка</a></li>
-          <li><a href="guarantee.html">Гарантия</a></li>
-          <li><a href="contacts.html">Контакты</a></li>
-        </ul>
-        <p class="number-phone"><a href="tel:+74954969595">Тел.: +7 (495) 495-95-95</a></p>
-      </div>
-      <div class="footer-bottom">
-        <ul class="social-list">
-          <li><a class="social-facebook" href="#"><span class="visually-hidden">Facebook Device</span></a></li>
-          <li><a class="social-instagram" href="#"><span class="visually-hidden">Instagram Device</span></a></li>
-          <li><a class="social-twitter" href="#"><span class="visually-hidden">Twitter Device</span></a></li>
-        </ul>
-        <a href="https://htmlacademy.ru/intensive/htmlcss"><img class="logo-academy" src="img/logo-html.svg" width="27"
-            height="34" alt="Логотип HTML Academy"></a>
-      </div>
-    </div>
-  </footer> -->
-
   <footer>
     <div class="container">
       <div class="footer-top">
@@ -328,37 +268,11 @@
           <li><a class="social-instagram" href="#"><span class="visually-hidden">Instagram Device</span></a></li>
           <li><a class="social-twitter" href="#"><span class="visually-hidden">Twitter Device</span></a></li>
         </ul>
-        <a class="logo-academy-footer" href="https://htmlacademy.ru/intensive/htmlcss"><img class="logo-academy" src="img/logo-html.svg" width="27"
-            height="34" alt="Логотип HTML Academy"></a>
+        <a class="logo-academy-footer" href="https://htmlacademy.ru/intensive/htmlcss"><img class="logo-academy"
+            src="img/logo-html.svg" width="27" height="34" alt="Логотип HTML Academy"></a>
       </div>
     </div>
   </footer>
-
-  <!-- <footer>
-    <a class="footer-logo" href="index.html">
-      <img src="img/logo2.svg" width="164" height="35" alt="Логотип интернет-магазина Device">
-    </a>
-    <p class="adress">г. Москва, ул. Строителей, 15</p>
-    <ul class="footer-nav">
-      <li><a href="delivery.html">Доставка</a></li>
-      <li><a href="guarantee.html">Гарантия</a></li>
-      <li><a href="contacts.html">Контакты</a></li>
-    </ul>
-    <ul class="social">
-      <li><a class="social-facebook" href="#"><span class="visually-hidden">Facebook Device</span></a></li>
-      <li><a class="social-instagram" href="#"><span class="visually-hidden">Instagram Device</span></a></li>
-      <li><a class="social-twitter" href="#"><span class="visually-hidden">Twitter Device</span></a></li>
-    </ul>
-    <ul class="user-nav-footer">
-      <li class="user-item-footer user"><a href="#">Валентин Петухов</a></li>
-      <li class="user-item-footer exit"><a href="#">Выйти</a></li>
-      <li class="user-item-footer compare"><a href="#">Сравнить</a></li>
-      <li class="user-item-footer basket"><a href="#">Корзина</a></li>
-    </ul>
-    <p><a class="number-phone" href="tel:+74954969595">Тел.: +7(495) 496-95-95</a></p>
-    <a href="https://htmlacademy.ru/intensive/htmlcss"><img class="logo-academy" src="img/logo-html.svg" width="27"
-        height="34" alt="Логотип HTML Academy"></a>
-  </footer> -->
 </body>
 
 </html>
