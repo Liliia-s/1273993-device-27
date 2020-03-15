@@ -884,7 +884,7 @@ html {
   position: relative;
   padding: 0;
   margin: 0;
-  margin-left: 118px;
+  margin-left: 122px;
   list-style: none;
   flex-grow: 1;
 }
@@ -911,20 +911,41 @@ html {
   margin: 0;
 }
 
-.controls-delivery {
+.controls-item {
   margin-top: 6px;
-  padding: 9px 0 8px 18px;
+  padding: 9px 0 8px 20px;
 }
 
 .controls-guarantee {
-  padding: 9px 0 8px 0px;
+  padding-left: 25px;
 }
 
 .controls-credit {
-  padding: 10px 0 8px 0px;
+  padding-left: 37px;
 }
 
-.ser
+.controls-item::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: -1;
+    width: 58%;
+    height: 8px;
+    background-color: #f0c52e;
+    transform: translateY(-50%);
+    transition: height 0.5s ease-in;
+  }
+  
+  .controls-item:hover::after,
+  .controls-item:focus::after {
+    top: 50%;
+    left: 0;
+    z-index: -1;
+    width: 58%;
+    height: 100%;
+  }
+
 
 .service-delivery,
 .service-guarantee,
@@ -962,10 +983,16 @@ html {
   top: -13px;
 }
 
+.services-controls {
+  position: relative;
+  z-index: 2;
+  width: 277px;
+}
+
 .services-controls label {
   position: relative;
   display: block;
-  width: 160px;
+  width: 100%;
   margin-right: 21px;
   color: black;
   /* background-color: #f0c52e; */
@@ -977,11 +1004,6 @@ html {
   line-height: 1.33;
   letter-spacing: 3.6px;
   text-transform: uppercase;
-}
-
-.services-controls {
-  position: relative;
-  margin-right: 100px;
 }
 
 .services-controls::after {
@@ -1015,7 +1037,13 @@ html {
 
 #service-1:checked ~ .services label[for="service-1"],
 #service-2:checked ~ .services label[for="service-2"],
-#service-3:checked ~ .services label[for="service-3"] {
+#service-3:checked ~ .services label[for="service-3"],
+#service-1:active ~ .services label[for="service-1"],
+#service-2:active ~ .services label[for="service-2"],
+#service-3:active ~ .services label[for="service-3"],
+#service-1:focus ~ .services label[for="service-1"],
+#service-2:focus ~ .services label[for="service-2"],
+#service-3:focus ~ .services label[for="service-3"]{
   color: #f0c52e;
   background-color: black;
 }
