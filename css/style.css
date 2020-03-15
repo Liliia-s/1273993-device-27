@@ -643,7 +643,7 @@ html {
   height: 8px;
   background-color: #f0c52e;
   }
-  
+
   .button:hover::after,
   .button:focus::after {
     transform: translateY(-40%);
@@ -717,7 +717,7 @@ html {
   position: absolute;
   display: flex;
   top: 329px;
-  right: 62px;  
+  right: 62px;
   font-size: 0;
   z-index: 20;
 }
@@ -747,8 +747,8 @@ html {
   position: absolute;
   top: 3px;
   left: 3px;
-  width: 5px;
-  height: 5px;
+  width: 4px;
+  height: 4px;
   border: 1px solid #000000;
   border-radius: 50%;
   cursor: pointer;
@@ -876,7 +876,7 @@ html {
 }
 
 .services {
-  display: flex;  
+  display: flex;
   flex-wrap: wrap;
 }
 
@@ -1100,7 +1100,7 @@ html {
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
   padding-left: 17px;
-  letter-spacing: 0.8px;  
+  letter-spacing: 0.8px;
 }
 
 .delivery-list li:not(:last-child) {
@@ -1640,7 +1640,7 @@ section.catalog {
   position: absolute;
   background: url("../img/checkbox-off.svg") no-repeat;
   content: "";
-  width: 23px;  
+  width: 23px;
   height: 23px;
   left: 0;
   top: 0;
@@ -1676,7 +1676,7 @@ section.catalog {
   opacity: 1;
 }
 
-li.filters-option {
+.filters-option {
   margin-bottom: 10px;
 }
 
@@ -1723,7 +1723,7 @@ li.filters-option {
   opacity: 0.25;
   cursor: default;
 }
- 
+
 .radio-form:not(:disabled) + label:hover::before,
 .radio-form:not(:disabled) + label:focus::before,
 .radio-form:not(:disabled) + label:hover::after,
