@@ -925,27 +925,31 @@ html {
 }
 
 .controls-item::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    z-index: -1;
-    width: 58%;
-    height: 8px;
-    background-color: #f0c52e;
-    transform: translateY(-50%);
-    transition: height 0.5s ease-in;
-  }
-  
-  .controls-item:hover::after,
-  .controls-item:focus::after {
-    top: 50%;
-    left: 0;
-    z-index: -1;
-    width: 58%;
-    height: 100%;
-  }
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: -1;
+  width: 58%;
+  height: 8px;
+  background-color: #f0c52e;
+  transform: translateY(-50%);
+  transition: height 0.5s ease-in;
+}
 
+.controls-item:hover::after,
+.controls-item:focus::after {
+  top: 50%;
+  left: 0;
+  z-index: -1;
+  width: 58%;
+  height: 100%;
+}
+
+.services-input:focus + section controls-item::after {
+  color: #f0c52e;
+  background-color: black;
+}
 
 .service-delivery,
 .service-guarantee,
@@ -995,7 +999,6 @@ html {
   width: 100%;
   margin-right: 21px;
   color: black;
-  /* background-color: #f0c52e; */
   cursor: pointer;
   margin-bottom: 24px;
   font-family: "Gilroy", "Arial", sans-serif;
@@ -1016,14 +1019,15 @@ html {
   top: -74px;
 }
 
-.services-controls label::before {
+
+/* .services-controls label::before {
   position: absolute;
 }
 
 .services-controls label::before {
   position: absolute;
   content: "";
-}
+} */
 
 .service {
   display: none;
@@ -1720,15 +1724,15 @@ section.catalog {
   padding: 20px;
 }
 
-.checkbox-form:not(:disabled) + label:hover::before,
-.checkbox-form:not(:disabled) + label:focus::before,
-.checkbox-form:not(:disabled) + label:active::before {
-  opacity: 0.6;
+.checkbox-form:active:not(:disabled) + label::before {
+  opacity: 1;
 }
 
-.checkbox-form:not(:disabled) + label:focus::before,
-.checkbox-form:not(:disabled) + label:active::before {
-  opacity: 1;
+.checkbox-form:focus:not(:disabled) + label::before,
+.checkbox-form:focus:checked:not(:disabled) + label::before,
+.checkbox-form:hover:not(:disabled) + label:before,
+.checkbox-form:hover:checked:not(:disabled) + label::before {
+  opacity: 0.6;
 }
 
 .filters-option {
@@ -1779,24 +1783,26 @@ section.catalog {
   cursor: default;
 }
 
-.radio-form:not(:disabled) + label:hover::before,
-.radio-form:not(:disabled) + label:focus::before,
-.radio-form:not(:disabled) + label:hover::after,
-.radio-form:not(:disabled) + label:focus::after {
-  opacity: 0.6;
-}
-
-.radio-form:not(:disabled) + label:active::before,
-.radio-form:not(:disabled) + label:active::after {
+.radio-form:active:not(:disabled) + label::before,
+.radio-form:active:not(:disabled) + label::after {
   opacity: 1;
 }
 
+.radio-form:focus:not(:disabled) + label::before,
+.radio-form:focus:checked:not(:disabled) + label::before,
+.radio-form:hover:not(:disabled) + label:before,
+.radio-form:hover:checked:not(:disabled) + label::before,
+.radio-form:focus:not(:disabled) + label::after,
+.radio-form:focus:checked:not(:disabled) + label::after,
+.radio-form:hover:not(:disabled) + label:after,
+.radio-form:hover:checked:not(:disabled) + label::after {
+  opacity: 0.6;
+}
 
 .button-filters {
   width: 200px;
   padding: 14px 0 14px 0;
 }
-
 
 /*-------------------------catalog-------------------------*/
 
