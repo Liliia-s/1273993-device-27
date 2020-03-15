@@ -1182,7 +1182,8 @@ footer {
   margin-bottom: 6px;
 }
 
-.footer-logo {
+.footer-logo,
+.footer-logo-index {
   margin: 2px 0 0 0;
 }
 
