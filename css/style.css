@@ -631,13 +631,12 @@ html {
   color: #000000;
   border: none;
   z-index: 1;
-  width: 200px;
 }
 
 .button::after {
   position: absolute;
   content: "";
-  top: 35%;
+  top: 40%;
   left: 0;
   z-index: -1;
   width: 100%;
@@ -645,8 +644,9 @@ html {
   background-color: #f0c52e;
   }
   
-  .button:hover::after {
-    transform: translateY(-35%);
+  .button:hover::after,
+  .button:focus::after {
+    transform: translateY(-40%);
     height: 100%;
     transition: height 0.3s;
   }
@@ -674,8 +674,9 @@ html {
   display: inline-block;
   vertical-align: baseline;
   width: 220px;
-  margin-top: 35px;
-  margin-bottom: 56px;
+  padding: 14px 0;
+  margin-top: 22px;
+  margin-bottom: 40px;
 }
 
 .button:active {
@@ -1025,7 +1026,7 @@ html {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 72px;
+  margin-bottom: 77px;
 }
 
 .info-us h2 {
@@ -1044,7 +1045,7 @@ html {
   position: relative;
   margin: 0;
   padding: 0;
-  max-width: 490px;
+  width: 560px;
 }
 
 .about-us::before {
@@ -1070,7 +1071,7 @@ html {
   position: relative;
   margin: 0;
   padding: 0;
-  max-width: 570px;
+  width: 560px;
 }
 
 .contacts-info::before {
@@ -1079,16 +1080,16 @@ html {
   border: 3.5px solid #000000;
   width: 80px;
   top: 0;
-  left: 10px;
+  /* left: 10px; */
 }
 
 .contacts-info h2 {
-  padding-left: 7px;
+  /* padding-left: 7px; */
 }
 
 .delivery-list {
   margin: 0;
-  margin-bottom: 65px;
+  margin-bottom: 52px;
   padding: 0;
   padding-left: 18px;
   list-style: none;
@@ -1098,9 +1099,12 @@ html {
   position: relative;
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
-  margin-bottom: 10px;
   padding-left: 17px;
   letter-spacing: 0.8px;  
+}
+
+.delivery-list li:not(:last-child) {
+  margin-bottom: 10px;
 }
 
 .delivery-list li::before {
@@ -1115,22 +1119,32 @@ html {
 }
 
 .contacts-address {
-  padding-left: 8px;
+  /* padding-left: 8px; */
   letter-spacing: 0.1px;
   margin-bottom: 39px;
 }
 
 .contacts-map {
-  padding-left: 10px;
-  margin-bottom: 65px;
+  /* padding-left: 10px; */
+  margin-bottom: 53px;
 }
 
 .button-about-us {
-  margin-left: 23px;
+  /* margin-left: 23px; */
+  display: inline-block;
+  vertical-align: baseline;
+  width: 260px;
+  padding: 14px 0;
 }
 
 .button-contacts-info{
-  margin-left: 51px;
+  display: inline-block;
+  width: 260px;
+  padding: 14px 0;
+  /* padding-left: 0; */
+  /* padding-right: 0; */
+  /* margin-left: 51px; */
+  vertical-align: baseline;
 }
 
 /*-------------------------FOOTER----------------------------*/
@@ -1529,7 +1543,7 @@ section.catalog {
   padding: 0;
   margin: 0;
   list-style: none;
-  margin-bottom: 38px;
+  margin-bottom: 36px;
 }
 
 /*----------------filter-range----------------*/
@@ -1652,10 +1666,12 @@ section.catalog {
 }
 
 .checkbox-form:not(:disabled) + label:hover::before,
-.checkbox-form:not(:disabled) + label:focus::before {
+.checkbox-form:not(:disabled) + label:focus::before,
+.checkbox-form:not(:disabled) + label:active::before {
   opacity: 0.6;
 }
 
+.checkbox-form:not(:disabled) + label:focus::before,
 .checkbox-form:not(:disabled) + label:active::before {
   opacity: 1;
 }
@@ -1665,10 +1681,6 @@ li.filters-option {
 }
 
 /*----------------filters-bluetooth----------------*/
-
-.filter-radio {
-  margin-bottom: 5px;
-}
 
 .filter-radio legend {
   margin-bottom: 21px;
@@ -1723,6 +1735,13 @@ li.filters-option {
 .radio-form:not(:disabled) + label:active::after {
   opacity: 1;
 }
+
+
+.button-filters {
+  width: 200px;
+  padding: 14px 0 14px 0;
+}
+
 
 /*-------------------------catalog-------------------------*/
 
@@ -1891,7 +1910,7 @@ li.products-item {
   left: 0;
   text-align: center;
   background-color: rgb(255, 255, 255, 0.7);
-  padding: 50% 0;
+  padding: 166px 0 0 0;
 }
 
 .products-user a {
@@ -1900,7 +1919,8 @@ li.products-item {
 
 .button-basket {
   width: 200px;
-  margin: auto auto 16px;
+  padding: 14px 0;
+  margin: 0px auto 0px auto;
 }
 
 .products-item:hover .products-user {
@@ -2007,9 +2027,9 @@ ul.pagination-items {
 .modal-feedback-wrapper {
   position: relative;
   display: flex;
-  padding-top: 93px;
+  padding-top: 100px;
   padding-right: 100px;
-  padding-bottom: 76px;
+  padding-bottom: 60px;
   padding-left: 100px;
 }
 
@@ -2040,7 +2060,7 @@ ul.pagination-items {
 }
 
 .input-message {
-  padding-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .input-message label {
@@ -2094,10 +2114,6 @@ ul.pagination-items {
   resize: none;
 }
 
-.popup-form .button {
-  margin-top: 18px;
-}
-
 .modal-feedback textarea:hover {
   background-color: rgba(230, 230, 230, 0.8);
 }
@@ -2115,8 +2131,9 @@ ul.pagination-items {
   color: rgba(70, 70, 70, 0.4);
 }
 
-.modal-feedback .button {
+.button-modal {
   width: 200px;
+  padding: 14px 0;
   background: none;
   border: none;
 }
