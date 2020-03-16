@@ -470,7 +470,6 @@ html {
   opacity: 0.3;
 }
 
-
 /*-------------------------MAIN SLIDERS-------------------------*/
 
 .sliders {
@@ -706,7 +705,7 @@ html {
   right: 62px;
   font-size: 0;
   z-index: 20;
-} 
+}
 
 .slider-controls label {
   position: relative;
@@ -1068,6 +1067,7 @@ html {
 }
 
 /*-------------------------INFO-US-------------------------*/
+
 .info-us {
   display: flex;
   flex-wrap: wrap;
@@ -1690,7 +1690,6 @@ section.catalog {
   cursor: default;
   opacity: 0.25;
 }
-
 
 .checkbox-form:checked + label::before {
   background: url("../img/checkbox-on.svg") no-repeat;
