@@ -1100,7 +1100,7 @@ html {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 77px;
+  margin-bottom: 78px;
 }
 
 .info-us h2 {
@@ -2155,9 +2155,9 @@ ul.pagination-items {
   font-size: 14px;
   line-height: 18px;
   font-family: "Open Sans", "Arial", sans-serif;
-  color: #464646;
+  color: rgba(70, 70, 70, 0.4);
   background-color: rgba(230, 230, 230, 0.5);
-  border: 2px solid rgba(240, 197, 46, 0.5);
+  border: 3px solid transparent;
   outline: none;
 }
 
@@ -2166,6 +2166,7 @@ ul.pagination-items {
 }
 
 .modal-feedback input:focus {
+  border: 3px solid rgba(240, 197, 46, 0.5);
   background-color: #ffffff;
 }
 
@@ -2173,11 +2174,16 @@ ul.pagination-items {
   background-color: rgba(237, 181, 181, 1.0);
 }
 
+.modal-feedback input:invalid::placeholder {
+  color: rgba(70, 70, 70, 0.4);
+}
+
 .modal-feedback input::placeholder {
   color: rgba(70, 70, 70, 0.4);
 }
 
-.modal-feedback input:focus::placeholder {
+.modal-feedback input:focus::placeholder,
+.modal-feedback textarea:focus::placeholder {
   color: rgba(70, 70, 70);
 }
 
@@ -2187,9 +2193,9 @@ ul.pagination-items {
   padding: 14px 19px;
   font-size: 14px;
   line-height: 18px;
-  color: #464646;
+  color: rgba(70, 70, 70, 0.4);
   background-color: rgba(230, 230, 230, 0.5);
-  border: 2px solid rgba(240, 197, 46, 0.5);
+  border: 3px solid transparent;
   outline: none;
   resize: none;
 }
@@ -2199,6 +2205,7 @@ ul.pagination-items {
 }
 
 .modal-feedback textarea:focus {
+  border: 3px solid rgba(240, 197, 46, 0.5);
   background-color: #ffffff;
 }
 
@@ -2209,11 +2216,6 @@ ul.pagination-items {
   font-family: "Open Sans", "Arial", sans-serif;
   color: rgba(70, 70, 70, 0.4);
 }
-
-.modal-feedback textarea:focus::placeholder {
-  color: rgba(70, 70, 70);
-}
-
 
 .button-modal {
   width: 200px;
