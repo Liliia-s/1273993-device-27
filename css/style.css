@@ -1059,19 +1059,39 @@ html {
   margin-bottom: 83px;
 }
 
-.logo-dji:hover {
+.logo-dji, 
+.logo-gadjets,
+.logo-gopro,
+.logo-vive {
+  position: relative;
+}
+
+.partners-list a:hover::before,
+.partners-list a:focus::before {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 100px;
+  z-index: 1;
+}
+
+.logo-dji:hover::before,
+.logo-dji:focus::before {
   background: url("../img/logo-1.png") no-repeat;
 }
 
-.logo-gadjets:hover {
+.logo-gadjets:hover::before,
+.logo-gadjets:focus::before {
   background: url("../img/logo-2.png") no-repeat;
 }
 
-.logo-gopro:hover {
+.logo-gopro:hover::before,
+.logo-gopro:focus::before {
   background: url("../img/logo-3.png") no-repeat;
 }
 
-.logo-vive:hover {
+.logo-vive:hover::before,
+.logo-vive:focus::before {
   background: url("../img/logo-4.png") no-repeat;
 }
 
@@ -2078,6 +2098,7 @@ ul.pagination-items {
   background-color: #ffffff;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   transform: translate(-50%, -50%);
+  animation: show 0.5s ease-in;
 }
 
 .modal-feedback-wrapper {
@@ -2156,6 +2177,10 @@ ul.pagination-items {
   color: rgba(70, 70, 70, 0.4);
 }
 
+.modal-feedback input:focus::placeholder {
+  color: rgba(70, 70, 70);
+}
+
 .modal-feedback textarea {
   width: 760px;
   min-height: 156px;
@@ -2184,6 +2209,11 @@ ul.pagination-items {
   font-family: "Open Sans", "Arial", sans-serif;
   color: rgba(70, 70, 70, 0.4);
 }
+
+.modal-feedback textarea:focus::placeholder {
+  color: rgba(70, 70, 70);
+}
+
 
 .button-modal {
   width: 200px;
@@ -2255,6 +2285,7 @@ ul.pagination-items {
   background-color: #ffffff;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   transform: translate(-50%, -50%);
+  animation: show 0.5s ease-in;
 }
 
 .modal-map p {
@@ -2284,6 +2315,16 @@ ul.pagination-items {
 
 .modal-show {
   display: block;
+}
+
+@keyframes show {
+  0% {
+    transform: translate(-150%, -50%);
+  }
+
+  100% {
+    transform: translate(-50%, -50%);
+  }
 }
 
 @keyframes shake {
