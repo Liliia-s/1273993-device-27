@@ -718,16 +718,16 @@ html {
   cursor: pointer;
 }
 
-#product-1:checked ~ .sliders #slide-1,
-#product-2:checked ~ .sliders #slide-2,
-#product-3:checked ~ .sliders #slide-3 {
+.product-1-slider:checked ~ .sliders .list-slider-1,
+.product-2-slider:checked ~ .sliders .list-slider-2,
+.product-3-slider:checked ~ .sliders .list-slider-3 {
   display: flex;
   justify-content: space-between;
 }
 
-#product-1:checked ~ .sliders label[for="product-1"]::after,
-#product-2:checked ~ .sliders label[for="product-2"]::after,
-#product-3:checked ~ .sliders label[for="product-3"]::after {
+.product-1-slider:checked ~ .sliders label[for="product-1"]::after,
+.product-2-slider:checked ~ .sliders label[for="product-2"]::after,
+.product-3-slider:checked ~ .sliders label[for="product-3"]::after {
   content: "";
   position: absolute;
   top: 3px;
@@ -853,6 +853,7 @@ html {
   padding-bottom: 115px;
   margin-bottom: 95px;
   background-image: linear-gradient(#ffffff 26px, #e5e5e5 26px, #e5e5e5 340px);
+  min-width: 1200px;
 }
 
 .services-list {
@@ -993,28 +994,28 @@ html {
   display: none;
 }
 
-#service-1:checked ~ .services #service1,
-#service-2:checked ~ .services #service2,
-#service-3:checked ~ .services #service3 {
+.service-1-item:checked ~ .services .service-delivery,
+.service-2-item:checked ~ .services .service-guarantee,
+.service-3-item:checked ~ .services .service-credit {
   display: block;
 }
 
-#service-1:checked ~ .services label[for="service-1"],
-#service-2:checked ~ .services label[for="service-2"],
-#service-3:checked ~ .services label[for="service-3"],
-#service-1:active ~ .services label[for="service-1"],
-#service-2:active ~ .services label[for="service-2"],
-#service-3:active ~ .services label[for="service-3"],
-#service-1:focus ~ .services label[for="service-1"],
-#service-2:focus ~ .services label[for="service-2"],
-#service-3:focus ~ .services label[for="service-3"]{
+.service-1-item:checked ~ .services label[for="service-1"],
+.service-2-item:checked ~ .services label[for="service-2"],
+.service-3-item:checked ~ .services label[for="service-3"],
+.service-1-item:active ~ .services label[for="service-1"],
+.service-2-item:active ~ .services label[for="service-2"],
+.service-3-item:active ~ .services label[for="service-3"],
+.service-1-item:focus ~ .services label[for="service-1"],
+.service-2-item:focus ~ .services label[for="service-2"],
+.service-3-item:focus ~ .services label[for="service-3"]{
   color: #f0c52e;
   background-color: black;
 }
 
-#service-1:focus ~ .services label[for="service-1"],
-#service-2:focus ~ .services label[for="service-2"],
-#service-3:focus ~ .services label[for="service-3"] {
+.service-1-item:focus ~ .services label[for="service-1"],
+.service-2-item:focus ~ .services label[for="service-2"],
+.service-3-item:focus ~ .services label[for="service-3"] {
   outline: 2px solid #f0c52e;
 }
 
@@ -1187,6 +1188,7 @@ html {
 footer {
   background-color: #464646;
   padding: 63px 0 58px 0px;
+  min-width: 1200px;
 }
 
 .footer-top,
@@ -1945,7 +1947,7 @@ li.products-item {
   top: 0;
   left: 0;
   text-align: center;
-  background-color: rgb(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.7);
   padding: 171px 0 0 0;
 }
 
