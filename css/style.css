@@ -375,7 +375,8 @@ html {
   justify-content: space-between;
   padding: 0;
   margin: 0;
-  width: 560px;}
+  width: 560px;
+}
 
 .main-nav-item {
   font-family: "Gilroy", "Arial", sans-serif;
@@ -654,35 +655,6 @@ html {
   width: 100%;
   height: 100%;
 }
-
-/* .button:active {
-  color: rgba(0, 0, 0, 0.3);
-  background-image: none;
-  background-color: #f0c52e;
-} */
-
-
-
-/*
-
-.button::after {
-  position: absolute;
-  content: "";
-  top: 40%;
-  left: 0;
-  z-index: -1;
-  width: 100%;
-  height: 8px;
-  background-color: #f0c52e;
-  }
-
-  .button:hover::after,
-  .button:focus::after {
-    transform: translateY(-40%);
-    height: 100%;
-    transition: height 0.3s;
-  } */
-
 
 .sliders-button {
   display: inline-block;
@@ -1154,11 +1126,6 @@ html {
   border: 3.5px solid #000000;
   width: 80px;
   top: 0;
-  /* left: 10px; */
-}
-
-.contacts-info h2 {
-  /* padding-left: 7px; */
 }
 
 .delivery-list {
@@ -1193,18 +1160,15 @@ html {
 }
 
 .contacts-address {
-  /* padding-left: 8px; */
   letter-spacing: 0.1px;
   margin-bottom: 39px;
 }
 
 .contacts-map {
-  /* padding-left: 10px; */
   margin-bottom: 61px;
 }
 
 .button-about-us {
-  /* margin-left: 23px; */
   display: inline-block;
   vertical-align: baseline;
   width: 260px;
@@ -1215,9 +1179,6 @@ html {
   display: inline-block;
   width: 260px;
   padding: 8px 0;
-  /* padding-left: 0; */
-  /* padding-right: 0; */
-  /* margin-left: 51px; */
   vertical-align: baseline;
 }
 
