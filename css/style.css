@@ -688,9 +688,9 @@ html {
   display: inline-block;
   vertical-align: baseline;
   width: 220px;
-  padding: 14px 0;
-  margin-top: 22px;
-  margin-bottom: 40px;
+  padding: 8px 0;
+  margin-top: 28px;
+  margin-bottom: 46px;
 }
 
 .button:active {
@@ -1100,7 +1100,7 @@ html {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 78px;
+  margin-bottom: 82px;
 }
 
 .info-us h2 {
@@ -1163,7 +1163,7 @@ html {
 
 .delivery-list {
   margin: 0;
-  margin-bottom: 52px;
+  margin-bottom: 60px;
   padding: 0;
   padding-left: 18px;
   list-style: none;
@@ -1200,7 +1200,7 @@ html {
 
 .contacts-map {
   /* padding-left: 10px; */
-  margin-bottom: 53px;
+  margin-bottom: 61px;
 }
 
 .button-about-us {
@@ -1208,13 +1208,13 @@ html {
   display: inline-block;
   vertical-align: baseline;
   width: 260px;
-  padding: 14px 0;
+  padding: 8px 0;
 }
 
 .button-contacts-info{
   display: inline-block;
   width: 260px;
-  padding: 14px 0;
+  padding: 8px 0;
   /* padding-left: 0; */
   /* padding-right: 0; */
   /* margin-left: 51px; */
@@ -1429,7 +1429,7 @@ footer {
   border: 3px solid #ffc600;
   width: 80px;
   left: 0px;
-  top: 14px;
+  top: 15px;
 }
 
 .social-list li:not(:last-child) {
@@ -1816,7 +1816,7 @@ section.catalog {
 
 .button-filters {
   width: 200px;
-  padding: 14px 0 14px 0;
+  padding: 11px 0 8px 0;
 }
 
 /*-------------------------catalog-------------------------*/
@@ -1986,7 +1986,7 @@ li.products-item {
   left: 0;
   text-align: center;
   background-color: rgb(255, 255, 255, 0.7);
-  padding: 166px 0 0 0;
+  padding: 171px 0 0 0;
 }
 
 .products-user a {
@@ -1995,8 +1995,8 @@ li.products-item {
 
 .button-basket {
   width: 200px;
-  padding: 14px 0;
-  margin: 0px auto 0px auto;
+  padding: 8px 0;
+  margin: 0px auto 9px auto;
 }
 
 .products-item:hover .products-user {
