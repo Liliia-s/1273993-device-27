@@ -1203,6 +1203,11 @@ footer {
   margin: 0;
   padding: 0;
   list-style: none;
+  max-width: 60%;
+}
+
+.footer-middle p {
+  max-width: 20%; 
 }
 
 .user-nav-footer {
